@@ -1,0 +1,16 @@
+---
+layout: /src/layouts/Shell.astro
+title: Our sponsors
+description: Sponsors who made our event possible!
+---
+import Sponsors from "@components/Sponsors.astro";
+
+<div class="p-section p-strip is-shallow">
+    <div class="row">
+    <b>{frontmatter.description}</b>
+    <hr class="p-rule"/>
+    Thank you to our every generous sponsors whose support made our event possible!
+    Interested to sponsor us? [See how to become our sponsor and join us today!](./become-a-sponsor)
+    </div>
+</div>
+<Sponsors/>

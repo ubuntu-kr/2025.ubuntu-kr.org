@@ -1,0 +1,68 @@
+---
+import { WebsiteConfig } from "../config";
+import * as m from "../paraglide/messages.js";
+import jsdom from "jsdom";
+const { JSDOM } = jsdom;
+const window = new JSDOM().window;
+const blogFeedRaw = await fetch(WebsiteConfig.blog.rssFeedUrl);
+const blogFeedXml = new window.DOMParser().parseFromString(
+    await blogFeedRaw.text(),
+    "text/xml",
+);
+const blogItemsXml = blogFeedXml.querySelectorAll("item");
+const blogItems = new Array();
+blogItemsXml.forEach((el: Element) => {
+    blogItems.push({
+        title: el.querySelector("title")?.innerHTML,
+        link: el.querySelector("link")?.innerHTML,
+        date: el.querySelector("pubDate")?.innerHTML,
+        content: el.querySelector("description")?.textContent?.replace(/(<([^>]+)>)/gi, ""),
+    });
+});
+---
+
+<div class="row--25-75-on-large">
+    <hr class="p-rule">
+    <div class="col">
+      <a href={WebsiteConfig.blog.viewMoreUrl}>
+        <p class="p-muted-heading">
+          {m.blogBanner_title()}
+        </p>
+      </a>
+    </div>
+  
+    <div class="col">
+      <div class="p-equal-height-row">
+        {blogItems.slice(0, 3).map((item) => (
+            <div class="p-equal-height-row__col">
+                    <b class="p-equal-height-row__item">
+                        {item.title}
+                    </b>
+                
+                <p class="p-equal-height-row__item" style="text-overflow: ellipsis; overflow: hidden; max-height: 5em;">
+                    {item.content}
+                </p>
+                <p class="p-equal-height-row__item auto-format-datetime">
+                    {item.date}
+                </p>
+        
+                <div class="p-equal-height-row__item">
+                    <hr class="is-muted">
+        
+                    <a href={item.link}>
+                    <p>
+                        {m.blogBanner_learnMore()}
+                    </p>
+                    </a>
+                </div>
+            </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+<script>
+document.querySelectorAll(".auto-format-datetime").forEach((element)=>{
+    element.innerHTML = new Date(element.innerHTML).toLocaleString();
+});
+</script>

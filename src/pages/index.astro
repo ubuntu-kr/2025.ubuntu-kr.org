@@ -1,0 +1,13 @@
+---
+import { getRelativeLocaleUrlList } from 'astro:i18n';
+
+export function getStaticPaths() {
+	return getRelativeLocaleUrlList().map((locale) => {
+		let localeItem = locale.split('/')[1];
+		return {
+			params: { locale: localeItem },
+		};
+	});
+}
+
+---
