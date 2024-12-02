@@ -15,7 +15,7 @@ export default defineConfig({
       outdir: "./src/paraglide", //where your files should be
     }),],
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "ko",
     locales: ["en", "ko"],
     routing: {
       prefixDefaultLocale: true
