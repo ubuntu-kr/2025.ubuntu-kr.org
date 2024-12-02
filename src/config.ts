@@ -21,34 +21,9 @@ export const WebsiteConfig = {
             childs: []
         },
         {
-            label: m.nav_venue_travel(),
-            link: "#",
-            childs: [
-                {
-                    label: m.nav_venue_safety(),
-                    link: `/${locale}/venue-and-travel/venue-and-safety`,
-                },
-                {
-                    label: m.nav_venue_visas(),
-                    link: `/${locale}/venue-and-travel/visas-and-other-travel-requirements`,
-                },
-                {
-                    label: m.nav_venue_accommodations(),
-                    link: `/${locale}/venue-and-travel/accommodations`,
-                },
-                {
-                    label: m.nav_venue_city(),
-                    link: `/${locale}/venue-and-travel/getting-to-the-city`,
-                },
-                {
-                    label: m.nav_venue_explore(),
-                    link: `/${locale}/venue-and-travel/explore-city`,
-                },
-                {
-                    label: m.nav_venue_grant(),
-                    link: `/${locale}/venue-and-travel/travel-grant`,
-                }
-            ]
+            label: m.nav_venue_safety(),
+            link: `/${locale}/venue-and-safety`,
+            childs: []
         },
         {
             label: m.nav_programs(),
@@ -56,11 +31,7 @@ export const WebsiteConfig = {
             childs: [
                 {
                     label: m.nav_programs_timetable(),
-                    link: "https://events.canonical.com/event/125/timetable/"
-                },
-                {
-                    label: m.nav_programs_social(),
-                    link: `/${locale}/programs/social-events/`
+                    link: "https://events.canonical.com/event/126/timetable/"
                 }
             ]
         },
@@ -88,15 +59,11 @@ export const WebsiteConfig = {
             childs: [
                 {
                     label: m.nav_links_news(),
-                    link: "https://blog.ubucon.asia/",
-                },
-                {
-                    label: m.nav_links_docs(),
-                    link: "https://docs.ubucon.asia",
+                    link: "https://discourse.ubuntu-kr.org/c/notice/9",
                 },
                 {
                     label: m.nav_links_chat(),
-                    link: "https://docs.ubucon.asia/chat",
+                    link: "https://ubuntu-kr.org/chat/",
                 }
             ]
         }
@@ -122,7 +89,7 @@ export const WebsiteConfig = {
         showFootnote: true,
         buttons: [
             {
-                label: "Become a sponsor!",
+                label: "후원사로 참여하기",
                 link: "/sponsors/become-a-sponsor",
                 class: "p-button--positive"
             }
