@@ -1,10 +1,9 @@
 
 
 import * as m from "./paraglide/messages.js";
-import UCALogo from './assets/logo.svg'
-import PashupatinathTempleImage from '@assets/pashupatinath_temple.jpg'
-import UbuConAsiaCommitteeLogo from "@assets/UbuConAsiaCommittee.svg"
-import OSCollectiveLogo from "@assets/oscollective.webp";
+import UCKLogo from './assets/logo.svg'
+import MicrosoftKoreaVenueImage from '@assets/hall.png'
+import UbuConKoreaLogo from "@assets/UbuntuKorea.svg"
 
 export interface SubMenuItem {
     link: string;
@@ -12,9 +11,9 @@ export interface SubMenuItem {
 }
 
 export const WebsiteConfig = {
-    siteTitle: "UbuCon Asia 2025",
-    siteDescription: "Kathmandu, Nepal | August 30-31",
-    faviconPath: UCALogo.src,
+    siteTitle: "UbuCon Korea 2025",
+    siteDescription: "Microsoft Korea, Seoul | August 9",
+    faviconPath: UCKLogo.src,
     navigation: (locale: string) => [
         {
             label: m.nav_about(),
@@ -22,34 +21,9 @@ export const WebsiteConfig = {
             childs: []
         },
         {
-            label: m.nav_venue_travel(),
-            link: "#",
-            childs: [
-                {
-                    label: m.nav_venue_safety(),
-                    link: `/${locale}/venue-and-travel/venue-and-safety`,
-                },
-                {
-                    label: m.nav_venue_visas(),
-                    link: `/${locale}/venue-and-travel/visas-and-other-travel-requirements`,
-                },
-                {
-                    label: m.nav_venue_accommodations(),
-                    link: `/${locale}/venue-and-travel/accommodations`,
-                },
-                {
-                    label: m.nav_venue_city(),
-                    link: `/${locale}/venue-and-travel/getting-to-the-city`,
-                },
-                {
-                    label: m.nav_venue_explore(),
-                    link: `/${locale}/venue-and-travel/explore-city`,
-                },
-                {
-                    label: m.nav_venue_grant(),
-                    link: `/${locale}/venue-and-travel/travel-grant`,
-                }
-            ]
+            label: m.nav_venue_safety(),
+            link: `/${locale}/venue-and-safety`,
+            childs: []
         },
         {
             label: m.nav_programs(),
@@ -57,11 +31,7 @@ export const WebsiteConfig = {
             childs: [
                 {
                     label: m.nav_programs_timetable(),
-                    link: "https://events.canonical.com/event/125/timetable/"
-                },
-                {
-                    label: m.nav_programs_social(),
-                    link: `/${locale}/programs/social-events/`
+                    link: "https://events.canonical.com/event/126/timetable/"
                 }
             ]
         },
@@ -89,15 +59,11 @@ export const WebsiteConfig = {
             childs: [
                 {
                     label: m.nav_links_news(),
-                    link: "https://blog.ubucon.asia/",
-                },
-                {
-                    label: m.nav_links_docs(),
-                    link: "https://docs.ubucon.asia",
+                    link: "https://discourse.ubuntu-kr.org/c/notice/9",
                 },
                 {
                     label: m.nav_links_chat(),
-                    link: "https://docs.ubucon.asia/chat",
+                    link: "https://ubuntu-kr.org/chat/",
                 }
             ]
         }
@@ -112,24 +78,23 @@ export const WebsiteConfig = {
         }
     ],
     footer: {
-        copyright: "© 2024-Present UbuCon Asia Committee. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Unless otherwise noted, content licensed under CC BY 4.0 source code under MIT.",
-        contactUs: "mailto:contact@ubucon.asia",
-        srcRepoUrl: "https://github.com/ubucon-asia/2025.ubucon.asia",
+        copyright: "© 2024-Present Ubuntu Korea Community. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Unless otherwise noted, content licensed under CC BY 4.0 source code under MIT.",
+        contactUs: "mailto:contact@ubuntu-kr.org",
+        srcRepoUrl: "https://github.com/ubuntu-kr/2025.ubuntu-kr.org",
         organizers: [
-            { name: "UbuCon Asia Committee", logoImage: UbuConAsiaCommitteeLogo.src, link: "https://www.ubucon.asia" },
-            { name: "Open Source Collective", logoImage: OSCollectiveLogo.src, link: "https://www.oscollective.org/" }
+            { name: "Ubuntu Korea Community", logoImage: UbuConKoreaLogo.src, link: "https://www.ubuntu-kr.org" },
         ]
     },
     mainBanner: {
         showFootnote: true,
         buttons: [
             {
-                label: "Become a sponsor!",
+                label: "후원사로 참여하기",
                 link: "/sponsors/become-a-sponsor",
                 class: "p-button--positive"
             }
         ],
-        logo: UCALogo
+        logo: UCKLogo
     },
     featuredSpeakers: {
         indicoExportUrl: "https://events.canonical.com/export/event/47.json?detail=contributions&occ=yes&pretty=yes",
@@ -138,7 +103,7 @@ export const WebsiteConfig = {
         fullSchedulesUrl: "https://events.canonical.com/event/47/contributions/"
     },
     cityBanner: {
-        cityImage: PashupatinathTempleImage.src
+        cityImage: MicrosoftKoreaVenueImage.src
     },
     blog: {
         rssFeedUrl: "https://blog.ubucon.asia/tags/uca24/index.xml",

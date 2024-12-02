@@ -34,14 +34,12 @@ export function getStaticPaths() {
 					<p>{m.videoBanner_description2()}</p>
 				</div>
 				<div class="col">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/Ul8DQh3yroo?si=RQT0Jqq8-bX4yU6-" 
-						title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HGX_ZmVOVUE?si=VBBdLjlA7PcwVeIb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				</div>
 		  		</div>
 			</div>
 		</section>
-	<FeaturedSpeakers/>
+	<!-- <FeaturedSpeakers/> -->
 	<div class="p-section">
 		<div class="row--50-50-on-large">
 		<hr>
@@ -65,16 +63,8 @@ export function getStaticPaths() {
 			</p>
 			</div>
 			<ul class="p-list--divided">
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/visas-and-other-travel-requirements">{m.travelBanner_listitem1()}</a></li>
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/getting-to-the-city">{m.travelBanner_listitem2()}</a></li>
-				<li class="p-list__item is-ticked">{m.travelBanner_listitem3()}</li>
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/venue-and-safety">{m.travelBanner_listitem4()}</a></li>
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/explore-city">{m.travelBanner_listitem5()}</a></li>
+				<li class="p-list__item is-ticked"><a href="/venue-and-safety">{m.travelBanner_listitem4()}</a></li>
 			</ul>
-			<div class="p-cta-block">
-				<a href="https://matrix.to/#/#ubucon-asia-travel:ubuntu.com" class="p-button">{m.travelBanner_button1()}</a>
-			<a href="mailto:travel@ubucon.asia">{m.travelBanner_button2()} ›</a>
-			</div>
 		</div>
 		</div>
 	</div>
