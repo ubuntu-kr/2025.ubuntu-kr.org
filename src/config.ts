@@ -1,10 +1,9 @@
 
 
 import * as m from "./paraglide/messages.js";
-import UCALogo from './assets/logo.svg'
-import PashupatinathTempleImage from '@assets/pashupatinath_temple.jpg'
-import UbuConAsiaCommitteeLogo from "@assets/UbuConAsiaCommittee.svg"
-import OSCollectiveLogo from "@assets/oscollective.webp";
+import UCKLogo from './assets/logo.svg'
+import MicrosoftKoreaVenueImage from '@assets/hall.png'
+import UbuConKoreaLogo from "@assets/UbuntuKorea.svg"
 
 export interface SubMenuItem {
     link: string;
@@ -12,9 +11,9 @@ export interface SubMenuItem {
 }
 
 export const WebsiteConfig = {
-    siteTitle: "UbuCon Asia 2025",
-    siteDescription: "Kathmandu, Nepal | August 30-31",
-    faviconPath: UCALogo.src,
+    siteTitle: "UbuCon Korea 2025",
+    siteDescription: "Microsoft Korea, Seoul | August 9",
+    faviconPath: UCKLogo.src,
     navigation: (locale: string) => [
         {
             label: m.nav_about(),
@@ -112,12 +111,11 @@ export const WebsiteConfig = {
         }
     ],
     footer: {
-        copyright: "© 2024-Present UbuCon Asia Committee. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Unless otherwise noted, content licensed under CC BY 4.0 source code under MIT.",
-        contactUs: "mailto:contact@ubucon.asia",
-        srcRepoUrl: "https://github.com/ubucon-asia/2025.ubucon.asia",
+        copyright: "© 2024-Present Ubuntu Korea Community. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Unless otherwise noted, content licensed under CC BY 4.0 source code under MIT.",
+        contactUs: "mailto:contact@ubuntu-kr.org",
+        srcRepoUrl: "https://github.com/ubuntu-kr/2025.ubuntu-kr.org",
         organizers: [
-            { name: "UbuCon Asia Committee", logoImage: UbuConAsiaCommitteeLogo.src, link: "https://www.ubucon.asia" },
-            { name: "Open Source Collective", logoImage: OSCollectiveLogo.src, link: "https://www.oscollective.org/" }
+            { name: "Ubuntu Korea Community", logoImage: UbuConKoreaLogo.src, link: "https://www.ubuntu-kr.org" },
         ]
     },
     mainBanner: {
@@ -129,7 +127,7 @@ export const WebsiteConfig = {
                 class: "p-button--positive"
             }
         ],
-        logo: UCALogo
+        logo: UCKLogo
     },
     featuredSpeakers: {
         indicoExportUrl: "https://events.canonical.com/export/event/47.json?detail=contributions&occ=yes&pretty=yes",
@@ -138,7 +136,7 @@ export const WebsiteConfig = {
         fullSchedulesUrl: "https://events.canonical.com/event/47/contributions/"
     },
     cityBanner: {
-        cityImage: PashupatinathTempleImage.src
+        cityImage: MicrosoftKoreaVenueImage.src
     },
     blog: {
         rssFeedUrl: "https://blog.ubucon.asia/tags/uca24/index.xml",
