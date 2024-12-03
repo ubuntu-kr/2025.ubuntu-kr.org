@@ -2,6 +2,7 @@
 import { getRelativeLocaleUrlList } from 'astro:i18n';
 import { WebsiteConfig } from "../config";
 import type { SubMenuItem } from "../config";
+import UbuntuKrCircleWhite from "@assets/UbuntuKrCircleWhite.svg"
 ---
 
 <header id="navigation" class="p-navigation is-dark">
@@ -12,7 +13,7 @@ import type { SubMenuItem } from "../config";
                     <div class="p-navigation__logo-tag">
                         <img
                             class="p-navigation__logo-icon"
-                            src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg"
+                            src={UbuntuKrCircleWhite.src}
                             alt=""
                         />
                     </div>
