@@ -1,7 +1,7 @@
 {
     "$schema": "https://inlang.com/schema/inlang-message-format",
-    "mainBanner_dates": "August 9",
-    "mainBanner_venue": "Microsoft Korea 13F, Seoul*",
+    "mainBanner_dates": "August 9, 2025",
+    "mainBanner_venue": "Microsoft Korea 13F*",
     "mainBanner_description": "UbuCon Korea is an event organized by Ubuntu Korea Community. In celebration of the 20th anniversary of Ubuntu Korea Community, this event connects, learns, and shares its knowledges with each other.",
     "mainBanner_footnote": "*To be confirmed",
     "videoBanner_title": "An event for people with Ubuntu and FOSS in common",
