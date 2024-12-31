@@ -90,7 +90,7 @@ export const WebsiteConfig = {
         buttons: [
             {
                 label: "후원사로 참여하기",
-                link: "/sponsors/become-a-sponsor",
+                link: `./sponsors/become-a-sponsor`,
                 class: "p-button--positive"
             }
         ],
