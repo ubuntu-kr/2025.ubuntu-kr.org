@@ -17,7 +17,9 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
             <img src={props.logoImageSrc} alt={props.name} 
                 onClick={() => {
                     if(props.showPopup){ setModalOpen(true); }
-                    }} />
+                }}
+                loading="lazy"
+            />
            
             <div className="p-modal" id="modal" style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
             <section className="p-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">

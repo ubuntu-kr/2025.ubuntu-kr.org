@@ -20,7 +20,7 @@ import SponsorLogoAndModal from "@components/SponsorLogoAndModal.tsx";
                         <div class="row">
                             {level.list.map((item) => (
                                 <div class={`col-${level.sizeOnLargeScreen} col-medium-${level.sizeOnMediumScreen} col-small-${level.sizeOnSmallScreen}`}
-                                    style={{ paddingTop: 10, alignContent: "center" }}>
+                                    style={{ paddingTop: 10, alignContent: "center", cursor: "pointer" }}>
                                     <SponsorLogoAndModal
                                         name={item.name}
                                         logoImageSrc={item.logoUrl}
