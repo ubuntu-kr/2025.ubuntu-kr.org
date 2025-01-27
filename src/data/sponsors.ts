@@ -1,5 +1,6 @@
 
 import logoPlaceHolder from "@assets/logo_placeholder.svg";
+import canonicalLogo from "@assets/sponsors/ubuntu.svg";
 
 
 export const sponsors = [
@@ -10,12 +11,7 @@ export const sponsors = [
         sizeOnSmallScreen: 6,
         showPopup: true,
         list: [
-            {
-                name: "Become a sponsor!",
-                logoUrl: logoPlaceHolder.src,
-                url: "/sponsors/become-a-sponsor",
-                description: "This sponsor slot is currently empty and available! Would like to support our event and become our sponsor? Click 'Visit website' button to join us today!"
-            },
+            
         ]
     },
     {
@@ -26,10 +22,10 @@ export const sponsors = [
         showPopup: true,
         list: [
             {
-                name: "Become a sponsor!",
-                logoUrl: logoPlaceHolder.src,
-                url: "/sponsors/become-a-sponsor",
-                description: "This sponsor slot is currently empty and available! Would like to support our event and become our sponsor? Click 'Visit website' button to join us today!"
+                name: "Ubuntu",
+                logoUrl: canonicalLogo.src,
+                url: "https://ubuntu.com/",
+                description: "Canonical은 대부분의 퍼블릭 클라우드 워크로드를 위한 OS이자 스마트 게이트웨이, 자율 주행 자동차 및 Advanced robot 등 새롭게 떠오르는 분야를 위한 OS인 Ubuntu를 개발 및 배포하는 회사입니다. Canonical은 상용 Ubuntu 사용자에게 엔터프라이즈 보안, 지원 및 서비스를 제공합니다."
             },
         ]
     },
@@ -40,12 +36,7 @@ export const sponsors = [
         sizeOnSmallScreen: 2,
         showPopup: true,
         list: [
-            {
-                name: "Become a sponsor!",
-                logoUrl: logoPlaceHolder.src,
-                url: "/sponsors/become-a-sponsor",
-                description: "This sponsor slot is currently empty and available! Would like to support our event and become our sponsor? Click 'Visit website' button to join us today!"
-            },
+            
         ]
     },
     {
@@ -55,12 +46,7 @@ export const sponsors = [
         sizeOnSmallScreen: 1,
         showPopup: true,
         list: [
-            {
-                name: "Become a sponsor!",
-                logoUrl: logoPlaceHolder.src,
-                url: "/sponsors/become-a-sponsor",
-                description: "This sponsor slot is currently empty and available! Would like to support our event and become our sponsor? Click 'Visit website' button to join us today!"
-            },
+            
         ]
     },
     {
@@ -70,27 +56,7 @@ export const sponsors = [
         sizeOnSmallScreen: 1,
         showPopup: true,
         list: [
-            {
-                name: "Become a sponsor!",
-                logoUrl: logoPlaceHolder.src,
-                url: "/sponsors/become-a-sponsor",
-                description: "This sponsor slot is currently empty and available! Would like to support our event and become our sponsor? Click 'Visit website' button to join us today!"
-            },
+            
         ]
     },
-    {
-        sponsorLevelName: "Community Partners",
-        sizeOnLargeScreen: 2,
-        sizeOnMediumScreen: 2,
-        sizeOnSmallScreen: 1,
-        showPopup: false,
-        list: [
-            {
-                name: "Become a sponsor!",
-                logoUrl: logoPlaceHolder.src,
-                url: "/sponsors/become-a-sponsor",
-                description: "This sponsor slot is currently empty and available! Would like to support our event and become our sponsor? Click 'Visit website' button to join us today!"
-            },
-        ]
-    }
 ]
