@@ -26,9 +26,18 @@ const { title, description } = Astro.props;
 	</body>
 </html>
 <style lang="scss" is:global>
-	// Import the framework
+// Import the framework
 @import 'node_modules/vanilla-framework';
+
+// Import Web Font for Korean glyphs
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 
 // Include all of Vanilla Framework
 @include vanilla;
+
+// Apply Keep-All and Web Font to Korean words
+body {
+	word-break: keep-all;
+	font-family: "Ubuntu variable", Ubuntu, Pretendard, "Pretendard Variable", -apple-system, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, "Helvetica Neue",sans-serif;
+}
 </style>
