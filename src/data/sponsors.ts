@@ -5,16 +5,6 @@ import canonicalLogo from "@assets/sponsors/ubuntu.svg";
 
 export const sponsors = [
     {
-        sponsorLevelName: "Diamond",
-        sizeOnLargeScreen: 6,
-        sizeOnMediumScreen: 6,
-        sizeOnSmallScreen: 6,
-        showPopup: true,
-        list: [
-            
-        ]
-    },
-    {
         sponsorLevelName: "Gold",
         sizeOnLargeScreen: 4,
         sizeOnMediumScreen: 4,
