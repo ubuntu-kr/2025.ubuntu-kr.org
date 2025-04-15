@@ -94,7 +94,7 @@ export const WebsiteConfig = {
     },
     mainBanner: {
         showFootnote: true,
-        buttons: [
+        buttons: (locale: string) => [
             {
                 label: m.nav_programs_cfp(),
                 link: `/cfp`,
@@ -102,7 +102,7 @@ export const WebsiteConfig = {
             },
             {
                 label: m.nav_sponsors_become(),
-                link: `./sponsors/become-a-sponsor`,
+                link: `/${locale}/sponsors/become-a-sponsor`,
                 class: "p-button"
             },
         ],
