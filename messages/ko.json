@@ -25,7 +25,7 @@
     "visit_website": "웹사이트 방문",
     "footer_contact": "이메일로 문의하기",
     "footer_source": "소스코드 확인하기",
-    "footer_other_years": "UbuCon Asia in other years",
+    "footer_other_years": "지난 UbuCon Korea",
     "footer_ubucons": "다른 지역의 UbuCon 행사 찾아보기",
     "footer_top": "페이지 최상단으로 이동하기",
 
@@ -40,6 +40,7 @@
 
     "nav_programs": "프로그램",
     "nav_programs_timetable": "시간표",
+    "nav_programs_cfp": "발표 제안하기",
     "nav_programs_social": "Social events",
 
     "nav_sponsors": "후원사 / 개인 후원",

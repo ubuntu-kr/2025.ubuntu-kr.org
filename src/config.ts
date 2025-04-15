@@ -13,6 +13,9 @@ export interface SubMenuItem {
 export const WebsiteConfig = {
     siteTitle: "UbuCon Korea 2025",
     siteDescription: "Microsoft Korea, Seoul | August 9",
+    socialMedia: {
+        "twitter": "UbuntuKrOrg"
+    },
     faviconPath: UCKLogo.src,
     navigation: (locale: string) => [
         {
@@ -29,6 +32,10 @@ export const WebsiteConfig = {
             label: m.nav_programs(),
             link: "#",
             childs: [
+                {
+                    label: m.nav_programs_cfp(),
+                    link: "/cfp"
+                },
                 {
                     label: m.nav_programs_timetable(),
                     link: "https://events.canonical.com/event/126/timetable/"
@@ -89,10 +96,15 @@ export const WebsiteConfig = {
         showFootnote: true,
         buttons: [
             {
-                label: "후원사로 참여하기",
-                link: `./sponsors/become-a-sponsor`,
+                label: m.nav_programs_cfp(),
+                link: `/cfp`,
                 class: "p-button--positive"
-            }
+            },
+            {
+                label: m.nav_sponsors_become(),
+                link: `./sponsors/become-a-sponsor`,
+                class: "p-button"
+            },
         ],
         logo: UCKLogo
     },
