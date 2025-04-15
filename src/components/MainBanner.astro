@@ -11,7 +11,7 @@ import * as m from "../paraglide/messages.js";
         <p>{m.mainBanner_description()}</p>
         <p><small>{WebsiteConfig.mainBanner.showFootnote ? m.mainBanner_footnote :""}</small></p>
         {WebsiteConfig.mainBanner.buttons(Astro.currentLocale ?? "en").map((buttonConfig)=>(
-            <a href={buttonConfig.link}>
+            <a href={buttonConfig.link} target={buttonConfig.target ?? "_self"}>
                 <button class={buttonConfig.class}>
                     {buttonConfig.label}
                 </button>
