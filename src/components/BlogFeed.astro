@@ -24,7 +24,8 @@ blogItemsXml.forEach((el: Element) => {
 <div class="row--25-75-on-large">
     <hr class="p-rule">
     <div class="col">
-      <a href={WebsiteConfig.blog.viewMoreUrl}>
+      <a target="_blank"
+        href={blogItems.length > 0 ? WebsiteConfig.blog.viewMoreUrl : WebsiteConfig.blog.viewMoreUrlAlternative}>
         <p class="p-muted-heading">
           {m.blogBanner_title()}
         </p>
@@ -33,7 +34,7 @@ blogItemsXml.forEach((el: Element) => {
   
     <div class="col">
       <div class="p-equal-height-row">
-        {blogItems.slice(0, 3).map((item) => (
+        {blogItems.length > 0 ? blogItems.slice(0, 3).map((item) => (
             <div class="p-equal-height-row__col">
                     <b class="p-equal-height-row__item">
                         {item.title}
@@ -56,7 +57,12 @@ blogItemsXml.forEach((el: Element) => {
                     </a>
                 </div>
             </div>
-        ))}
+        )) : <div class="p-equal-height-row__col">
+            <p class="p-equal-height-row__item">
+              {m.blogBanner_empty()}
+            </p>
+          </div>
+          }
       </div>
     </div>
   </div>

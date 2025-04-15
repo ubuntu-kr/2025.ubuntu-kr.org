@@ -19,13 +19,14 @@
     "travelBanner_button1": "Plan trip with other attendees",
     "travelBanner_button2": "Contact travel support team for help",
     "blogBanner_title": "Latest from our blog",
+    "blogBanner_empty": "We are preparing for the latest news. Stay tuned!",
     "blogBanner_learnMore": "Learn more",
     "our_sponsors": "Our Sponsors",
     "sponsor_about": "About the sponsor",
     "visit_website": "Visit website",
     "footer_contact": "Contact us with Email",
     "footer_source": "See source code",
-    "footer_other_years": "UbuCon Asia in other years",
+    "footer_other_years": "UbuCon Korea in other years",
     "footer_ubucons": "UbuCon(s) in other regions",
     "footer_top": "Go to the top of the page",
 
@@ -39,6 +40,7 @@
     "nav_venue_grant": "Travel grant",
 
     "nav_programs": "Programs",
+    "nav_programs_cfp": "Call for Proposals",
     "nav_programs_timetable": "Timetable",
     "nav_programs_social": "Social events",
 
