@@ -109,7 +109,7 @@ export const WebsiteConfig = {
         logo: UCKLogo
     },
     featuredSpeakers: {
-        indicoExportUrl: "https://events.canonical.com/export/event/47.json?detail=contributions&occ=yes&pretty=yes",
+        indicoExportUrl: "https://events.canonical.com/export/event/126.json?detail=contributions&occ=yes&pretty=yes",
         contributionIds: [20, 46, 43, 34, 19],
         speakerIds: [{ db_id: 522, user: 107 }, { db_id: 517, user: 166 }, { db_id: 494, user: 615 }, { db_id: 515, user: 628 }, { db_id: 516, user: 271 }, { db_id: 487, user: 3 }],
         fullSchedulesUrl: "https://events.canonical.com/event/47/contributions/"
@@ -118,7 +118,7 @@ export const WebsiteConfig = {
         cityImage: MicrosoftKoreaVenueImage.src
     },
     blog: {
-        rssFeedUrl: "https://blog.ubucon.asia/tags/uca24/index.xml",
-        viewMoreUrl: "https://blog.ubucon.asia/tags/uca24"
+        rssFeedUrl: "https://discourse.ubuntu-kr.org/tags/ubuntu-kr-2025.rss",
+        viewMoreUrl: "https://discourse.ubuntu-kr.org/tags/c/notice/9/ubucon-kr-2025"
     },
 }
