@@ -119,8 +119,8 @@ export const WebsiteConfig = {
         cityImage: MicrosoftKoreaVenueImage.src
     },
     blog: {
-        rssFeedUrl: "https://discourse.ubuntu-kr.org/tags/ubuntu-kr-2025.rss",
+        rssFeedUrl: "https://discourse.ubuntu-kr.org/tags/ubucon-kr-2025.rss",
         viewMoreUrl: "https://discourse.ubuntu-kr.org/tags/c/notice/9/ubucon-kr-2025",
-        viewMoreUrlAlternative: "https://discourse.ubuntu-kr.org/c/notice/9"
+        viewMoreUrlAlternative: "https://discourse.ubuntu-kr.org/tags/ubucon-kr-2025"
     },
 }
