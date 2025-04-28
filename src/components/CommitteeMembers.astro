@@ -13,12 +13,16 @@ import { committeeMembers } from "@data/committeeMembers";
                         alt={member.name}
                     />
                     <div class="p-media-object__details">
-                        <h4>{member.name}</h4>
+                        <h4 style={{ marginBottom: "0.1rem" }}>{member.name}</h4>
                         <p class="p-media-object__content">
                             {member.team}
                         </p>
                         <p class="p-media-object__content">
-                            {member.role}
+                            {member.role.map((role, idx) => (
+                                <span class={`u-no-margin--bottom ${idx === 0 ? "p-chip--information" : "p-chip"}`} data-i18n={Astro.currentLocale}>
+                                    {role}
+                                </span>
+                            ))}
                         </p>
                         <ul class="p-media-object__meta-list" />
                     </div>

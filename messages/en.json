@@ -29,7 +29,6 @@
     "footer_other_years": "UbuCon Korea in other years",
     "footer_ubucons": "UbuCon(s) in other regions",
     "footer_top": "Go to the top of the page",
-
     "nav_about": "About",
     "nav_venue_travel": "Venue & Travel",
     "nav_venue_safety": "Venue & Safety",
@@ -38,19 +37,22 @@
     "nav_venue_city": "Getting to the city",
     "nav_venue_explore": "Exploring the city",
     "nav_venue_grant": "Travel grant",
-
     "nav_programs": "Programs",
     "nav_programs_cfp": "Call for Proposals",
     "nav_programs_timetable": "Timetable",
     "nav_programs_social": "Social events",
-
     "nav_sponsors": "Sponsors/Patrons",
     "nav_sponsors_become": "Become a sponsor",
     "nav_sponsors_our": "Our sponsors",
     "nav_sponsors_patrons": "Patrons",
-
     "nav_links": "Links",
     "nav_links_news": "News",
     "nav_links_docs": "Docs",
-    "nav_links_chat": "Chat"
+    "nav_links_chat": "Chat",
+    "role_general": "General",
+    "role_sponsorship_finances": "Sponsorship and Finances",
+    "role_contents": "Contents",
+    "role_marketing_design": "Social Media and Design",
+    "role_web_video": "Web and Video",
+    "role_venue_safety": "Venue and Safety"
 }

@@ -29,7 +29,6 @@
     "footer_other_years": "지난 UbuCon Korea",
     "footer_ubucons": "다른 지역의 UbuCon 행사 찾아보기",
     "footer_top": "페이지 최상단으로 이동하기",
-
     "nav_about": "소개",
     "nav_venue_travel": "Venue & Travel",
     "nav_venue_safety": "행사장 및 안전정보",
@@ -38,20 +37,22 @@
     "nav_venue_city": "Getting to the city",
     "nav_venue_explore": "Exploring the city",
     "nav_venue_grant": "Travel grant",
-
     "nav_programs": "프로그램",
     "nav_programs_timetable": "시간표",
     "nav_programs_cfp": "발표 제안하기",
     "nav_programs_social": "Social events",
-
     "nav_sponsors": "후원사 / 개인 후원",
     "nav_sponsors_become": "후원사로 참여하기",
     "nav_sponsors_our": "후원사 소개",
     "nav_sponsors_patrons": "개인 후원 / 회비 회원",
-
     "nav_links": "주요 링크",
     "nav_links_news": "소식",
     "nav_links_docs": "문서",
-    "nav_links_chat": "채팅"
-    
+    "nav_links_chat": "채팅",
+    "role_general": "총괄",
+    "role_sponsorship_finances": "후원사 & 회계",
+    "role_contents": "콘텐츠",
+    "role_marketing_design": "마케팅 & 디자인",
+    "role_web_video": "웹사이트 & 비디오",
+    "role_venue_safety": "행사장, 물류 & 안전"
 }
