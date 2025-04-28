@@ -10,7 +10,7 @@ import { getRelativeLocaleUrlList } from 'astro:i18n';
         {getRelativeLocaleUrlList().map((locale, index) => {
             let localeItem = locale.split('/')[1];
             return (
-                    <button class="p-contextual-menu__link" onclick={`window.location.href = ${locale}`}>{localeItem}</button>
+              <a class="p-contextual-menu__link" href={Astro.url.pathname.replace(String(Astro.currentLocale), localeItem)}>{localeItem}</a>
             );
         })}
       </span>
@@ -84,9 +84,9 @@ function setupContextualMenu(menu: HTMLElement) {
 
   // Add handler for closing menus using ESC key.
   document.addEventListener('keydown', function(e) {
-    e = e || window.event;
+    e = e || KeyboardEvent;
 
-    if (e.keyCode === 27) {
+    if (e.key === "Escape") {
       toggleMenu(toggle, false);
     }
   });
