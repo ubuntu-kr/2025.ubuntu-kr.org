@@ -54,5 +54,7 @@
     "role_contents": "Contents",
     "role_marketing_design": "Social Media and Design",
     "role_web_video": "Web and Video",
-    "role_venue_safety": "Venue and Safety"
+    "role_venue_safety": "Venue and Safety",
+    "role_close": "Reset",
+    "role_search": "Search"
 }

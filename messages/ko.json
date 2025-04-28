@@ -54,5 +54,7 @@
     "role_contents": "콘텐츠",
     "role_marketing_design": "마케팅 & 디자인",
     "role_web_video": "웹사이트 & 비디오",
-    "role_venue_safety": "행사장, 물류 & 안전"
+    "role_venue_safety": "행사장, 물류 & 안전",
+    "role_search": "검색",
+    "role_close": "초기화"
 }

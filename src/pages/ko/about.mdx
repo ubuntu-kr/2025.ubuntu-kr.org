@@ -3,7 +3,7 @@ layout: /src/layouts/MarkdownLayout.astro
 title: UbuCon Korea 2025 소개
 description: UbuCon Korea 2025에 대해 알아보기
 ---
-import CommitteMembers from "/src/components/CommitteeMembers.astro";
+import CommitteMembers from "/src/components/CommitteeMembers.tsx";
 
 우부콘 코리아(UbuCon Korea)는 우분투한국커뮤니티가 주최하는 행사로, 지난 2023년부터 우부콘 아시아(UbuCon Asia)의 스핀오프로 시작하였습니다. 우분투, 리눅스 그리고 관련 오픈소스 기술에 연관되어 있거나 관심있는 사람 모두를 위한 행사이며, 국내 우분투 사용자와 기여자를 연결하고 서로 배우며 지식을 공유하는 만남의 장이기도 합니다.
 
@@ -18,4 +18,4 @@ import CommitteMembers from "/src/components/CommitteeMembers.astro";
 
 ## 조직위원회 
 우부콘 코리아 2025는 비영리 컨퍼런스이자 커뮤니티 주도 행사로, 우분투한국커뮤니티와 오픈소스 커뮤니티에서 온 자원 봉사자로 구성된 팀에서 운영하고 있습니다.
-<CommitteMembers/>
+<CommitteMembers client:only="react"/>

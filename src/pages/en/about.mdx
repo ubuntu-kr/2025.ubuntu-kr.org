@@ -3,7 +3,7 @@ layout: /src/layouts/MarkdownLayout.astro
 title: About UbuCon Korea 2025
 description: Brief introduction to UbuCon Korea 2025
 ---
-import CommitteMembers from "/src/components/CommitteeMembers.astro";
+import CommitteMembers from "/src/components/CommitteeMembers.tsx";
 
 UbuCon Korea is an event organized by Ubuntu Korea Community, started as a spin-off event of UbuCon Asia since 2023. It’s for everyone who involved with or interested in Ubuntu, Linux, and other Free and Open source technologies. It is also a place for Ubuntu users and contributors to connect, learn, and share their knowledges each other.
 
@@ -18,4 +18,4 @@ To provide safe environment for every participants, We’ve adapted following Co
 
 ## The Organizing Committee 
 UbuCon Korea 2025 is a not-for-profit conference and a community-driven event made possible by team of volunteers from Ubuntu Korea Community and other Korean FLOSS Communities.
-<CommitteMembers/>
+<CommitteMembers client:only="react"/>
