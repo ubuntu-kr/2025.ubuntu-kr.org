@@ -78,7 +78,7 @@ export const WebsiteConfig = {
     subNavigation: [
         {
             label: "🎟️",
-            link: "#",
+            link: "/tickets",
             childs: [
 
             ]
@@ -95,6 +95,12 @@ export const WebsiteConfig = {
     mainBanner: {
         showFootnote: true,
         buttons: (locale: string) => [
+            {
+                label: m.nav_register(),
+                link: `/tickets`,
+                class: "p-button--positive",
+                target: "_blank"
+            },
             {
                 label: m.nav_programs_cfp(),
                 link: `/cfp`,
