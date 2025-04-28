@@ -52,6 +52,8 @@
     "nav_links": "주요 링크",
     "nav_links_news": "소식",
     "nav_links_docs": "문서",
-    "nav_links_chat": "채팅"
+    "nav_links_chat": "채팅",
+
+    "nav_register": "참가등록"
     
 }

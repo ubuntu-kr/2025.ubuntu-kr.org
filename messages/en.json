@@ -52,5 +52,7 @@
     "nav_links": "Links",
     "nav_links_news": "News",
     "nav_links_docs": "Docs",
-    "nav_links_chat": "Chat"
+    "nav_links_chat": "Chat",
+
+    "nav_register": "Register"
 }
