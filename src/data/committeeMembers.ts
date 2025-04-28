@@ -1,5 +1,5 @@
 import * as m from "../paraglide/messages.js";
-import uck24Logo from "@assets/logo.svg";
+import uck25Logo from "@assets/logo.svg";
 export const committeeMembers = [
     {
         name: "Junsang Mun",
