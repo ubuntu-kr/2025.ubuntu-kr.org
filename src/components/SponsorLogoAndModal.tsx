@@ -1,5 +1,5 @@
 
-import { useEffect, useState, type MouseEvent } from "react";
+import { useState, type MouseEvent } from "react";
 import * as m from "../paraglide/messages.js";
 type SponsorLogoAndModalProps = {
     name: string,
