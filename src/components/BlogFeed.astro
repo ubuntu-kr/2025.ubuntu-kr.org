@@ -26,9 +26,9 @@ blogItemsXml.forEach((el: Element) => {
     <div class="col">
       <a target="_blank"
         href={blogItems.length > 0 ? WebsiteConfig.blog.viewMoreUrl : WebsiteConfig.blog.viewMoreUrlAlternative}>
-        <p class="p-muted-heading">
+        <h2 class="p-link--soft">
           {m.blogBanner_title()}
-        </p>
+        </h2>
       </a>
     </div>
   
@@ -36,26 +36,19 @@ blogItemsXml.forEach((el: Element) => {
       <div class="p-equal-height-row">
         {blogItems.length > 0 ? blogItems.slice(0, 3).map((item) => (
             <div class="p-equal-height-row__col">
-                    <b class="p-equal-height-row__item">
-                        {item.title}
-                    </b>
-                
+              <a href={item.link} target="_blank" class="p-link--soft p-equal-height-row__col">
+                <h3 class="p-equal-height-row__item">
+                    {item.title}
+                    <i class="p-icon--external-link"></i>
+                </h3>
                 <p class="p-equal-height-row__item" style="text-overflow: ellipsis; overflow: hidden; max-height: 5em;">
                     {item.content}
                 </p>
+                <hr />
                 <p class="p-equal-height-row__item auto-format-datetime">
                     {item.date}
                 </p>
-        
-                <div class="p-equal-height-row__item">
-                    <hr class="is-muted">
-        
-                    <a href={item.link}>
-                    <p>
-                        {m.blogBanner_learnMore()}
-                    </p>
-                    </a>
-                </div>
+              </a>
             </div>
         )) : <div class="p-equal-height-row__col">
             <p class="p-equal-height-row__item">

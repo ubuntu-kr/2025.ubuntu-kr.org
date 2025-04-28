@@ -10,7 +10,7 @@ import { getRelativeLocaleUrlList } from 'astro:i18n';
         {getRelativeLocaleUrlList().map((locale, index) => {
             let localeItem = locale.split('/')[1];
             return (
-                    <button class="p-contextual-menu__link" onclick={`window.location.href = ${locale}`}>{localeItem}</button>
+              <a class="p-contextual-menu__link" href={Astro.url.pathname.replace(String(Astro.currentLocale), localeItem)}>{localeItem}</a>
             );
         })}
       </span>
@@ -26,7 +26,7 @@ import { getRelativeLocaleUrlList } from 'astro:i18n';
   @param {Number} top Top offset in pixels where to show the menu.
 */
 function toggleMenu(element: HTMLElement, show: boolean, top?: number) {
-  var target = document.getElementById(element.getAttribute('aria-controls')?? '');
+  const target = document.getElementById(element.getAttribute('aria-controls')?? '');
 
   if (target) {
     element.setAttribute('aria-expanded', show.toString());
@@ -53,9 +53,9 @@ function setupContextualMenu(menu: HTMLElement) {
 
   toggle?.addEventListener('click', function(event) {
     event.preventDefault();
-    var menuAlreadyOpen = toggle.getAttribute('aria-expanded') === 'true';
+    const menuAlreadyOpen = toggle.getAttribute('aria-expanded') === 'true';
 
-    var top = toggle.offsetHeight;
+    let top = toggle.offsetHeight;
     // for inline elements leave some space between text and menu
     if (window.getComputedStyle(toggle).display === 'inline') {
       top += 5;
@@ -66,8 +66,8 @@ function setupContextualMenu(menu: HTMLElement) {
 
   // Add handler for clicking outside the menu.
   document.addEventListener('click', function(event) {
-    var contextualMenu = document.getElementById(toggle.getAttribute('aria-controls')?? '');
-    var clickOutside = !(toggle.contains(event.target as Node) || contextualMenu?.contains(event.target as Node));
+    const contextualMenu = document.getElementById(toggle.getAttribute('aria-controls')?? '');
+    const clickOutside = !(toggle.contains(event.target as Node) || contextualMenu?.contains(event.target as Node));
 
     if (clickOutside) {
       toggleMenu(toggle, false);
@@ -84,9 +84,9 @@ function setupContextualMenu(menu: HTMLElement) {
 
   // Add handler for closing menus using ESC key.
   document.addEventListener('keydown', function(e) {
-    e = e || window.event;
+    e = e || KeyboardEvent;
 
-    if (e.keyCode === 27) {
+    if (e.key === "Escape") {
       toggleMenu(toggle, false);
     }
   });
@@ -97,7 +97,7 @@ function setupContextualMenu(menu: HTMLElement) {
 */
 function setupAllContextualMenus(contextualMenuSelector: string) {
   // Setup all contextual menus on the page.
-  var menus = document.querySelectorAll(contextualMenuSelector) as NodeListOf<HTMLElement>;
+  const menus = document.querySelectorAll(contextualMenuSelector) as NodeListOf<HTMLElement>;
 
   for (var i = 0, l = menus.length; i < l; i++) {
     setupContextualMenu(menus[i]);

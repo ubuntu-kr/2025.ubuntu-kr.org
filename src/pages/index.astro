@@ -1,5 +1,6 @@
 ---
 import { getRelativeLocaleUrlList } from 'astro:i18n';
+import { WebsiteConfig } from 'src/config';
 
 export function getStaticPaths() {
 	return getRelativeLocaleUrlList().map((locale) => {
@@ -11,3 +12,8 @@ export function getStaticPaths() {
 }
 
 ---
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>{WebsiteConfig.siteTitle}</title>
+    </head>
