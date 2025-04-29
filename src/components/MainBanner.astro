@@ -12,7 +12,7 @@ import * as m from "../paraglide/messages.js";
         <p><small>{WebsiteConfig.mainBanner.showFootnote ? m.mainBanner_footnote :""}</small></p>
         {WebsiteConfig.mainBanner.buttons(Astro.currentLocale ?? "en").map((buttonConfig)=>(
             <a href={buttonConfig.link} target={buttonConfig.target ?? "_self"}>
-                <button class={buttonConfig.class}>
+                <button class={buttonConfig.class} style={{ marginBottom: "0.25rem" }}>
                     {buttonConfig.label}
                 </button>
             </a>
