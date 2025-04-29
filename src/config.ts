@@ -112,6 +112,12 @@ export const WebsiteConfig = {
                 link: `/${locale}/sponsors/become-a-sponsor`,
                 class: "p-button"
             },
+            {
+                label: m.mainBanner_earlybird,
+                link: `https://discourse.ubuntu-kr.org/t/ubucon-korea-2025/49982`,
+                class: "p-button",
+                target: "_blank"
+            },
         ],
         logo: UCKLogo
     },
