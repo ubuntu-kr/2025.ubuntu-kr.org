@@ -12,7 +12,7 @@ export interface SubMenuItem {
 
 export const WebsiteConfig = {
     siteTitle: "UbuCon Korea 2025",
-    siteDescription: "Microsoft Korea, Seoul | August 9",
+    siteDescription: "Microsoft Korea, Seoul | August 10",
     socialMedia: {
         "twitter": "UbuntuKrOrg"
     },
