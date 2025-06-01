@@ -3,6 +3,7 @@ layout: /src/layouts/MarkdownLayout.astro
 title: Individual Patrons and Members with dues
 description: Thank you for contributing our event by funding as one of individuals!
 ---
+import { patrons, ukc } from "@data/patrons";
 
 # Individual Patrons
 
@@ -12,6 +13,15 @@ Thanks to every patrons for supporting our event!
 
 > **Note** Only patrons who agreed to display their names are displayed here.
 
+<div class="grid-row">
+{patrons.map((person) => (
+  <div class="p-card grid-col-2">
+    <h3>{person.name}</h3>
+    <p class="p-card__content">{person.org ?? "-"}</p>
+  </div>
+))}
+</div>
+
 # Ubuntu Korea Community Members with dues
 
 People listed below are Ubuntu Korea Community Members with dues who bought tickets to participate in UbuCon Korea 2025.
@@ -20,3 +30,11 @@ Thanks to every members for supporting our event!
 
 > **Note** Only members who agreed to display their names are displayed here.
 
+<div class="grid-row">
+{ukc.map((person) => (
+  <div class="p-card grid-col-2">
+    <h3>{person.name}</h3>
+    <p class="p-card__content">{person.org ?? "-"}</p>
+  </div>
+))}
+</div>

@@ -3,6 +3,7 @@ layout: /src/layouts/MarkdownLayout.astro
 title: 개인 후원 및 회비 회원
 description: 행사 운영에 지원해주신 분들께 감사드립니다.
 ---
+import { patrons, ukc } from "@data/patrons";
 
 # 개인 후원자
 
@@ -12,6 +13,15 @@ description: 행사 운영에 지원해주신 분들께 감사드립니다.
 
 > 개인 후원자 정보 공개에 동의한 분들의 성함 및 소속만이 여기 등재됩니다.
 
+<div class="grid-row">
+{patrons.map((person) => (
+  <div class="p-card grid-col-2">
+    <h3>{person.name}</h3>
+    <p class="p-card__content">{person.org ?? "-"}</p>
+  </div>
+))}
+</div>
+
 # 회비 회원
 
 본 행사를 개최하는 우분투한국커뮤니티의 회비 회원 중 행사에 참여하신 분들의 목록입니다.
@@ -20,3 +30,11 @@ description: 행사 운영에 지원해주신 분들께 감사드립니다.
 
 > 행사에 참여한 우분투한국커뮤니티의 회비 회원 중 정보 공개에 동의하신 분들의 성함 및 소속만이 여기 등재됩니다.
 
+<div class="grid-row">
+{ukc.map((person) => (
+  <div class="p-card grid-col-2">
+    <h3>{person.name}</h3>
+    <p class="p-card__content">{person.org ?? "-"}</p>
+  </div>
+))}
+</div>
