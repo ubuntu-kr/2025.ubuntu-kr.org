@@ -19,6 +19,13 @@ blogItemsXml.forEach((el: Element) => {
         content: el.querySelector("description")?.textContent?.replace(/(<([^>]+)>)/gi, ""),
     });
 });
+
+blogItems.sort((a, b) => {
+  if (Date.parse(a.date) > Date.parse(b.date))
+    return -1;
+  else
+    return 1;
+});
 ---
 
 <div class="row--25-75-on-large">
