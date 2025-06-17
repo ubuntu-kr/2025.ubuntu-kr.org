@@ -2,7 +2,10 @@
 import logoPlaceHolder from "@assets/logo_placeholder.svg";
 import canonicalLogo from "@assets/sponsors/ubuntu.svg";
 import microsoftLogo from "@assets/sponsors/microsoft.png";
-
+import hanbitMediaLogo from "@assets/sponsors/hanbit-media.svg";
+import lablupLogo from "@assets/sponsors/lablup.svg";
+import whatapLogo from "@assets/sponsors/whatap.png";
+import grometric from "@assets/sponsors/grometric.svg";
 
 export const sponsors = [
     {
@@ -54,7 +57,29 @@ export const sponsors = [
         sizeOnSmallScreen: 2,
         showPopup: true,
         list: [
-            
+            {
+                name: "GroMetric",
+                logoUrl: grometric.src,
+                url: "http://www.grometric.kr/",
+                description: "그로메트릭은 고객의 지속가능한 성장을 위한 인텔리전스와 안전함을 제공합니다. 중장기적인 관점에서 데이터 메트릭을 통한 고객의 성장을 돕는 솔루션 개발을 목표하고 있어요. 아울러 다양한 OpenSource Software, Cloud, Security 솔루션으로 여러분의 성장과 함께 하고 싶어요."
+            },
+            {
+                name: "Lablup",
+                logoUrl: lablupLogo.src,
+                url: "https://www.lablup.com/ko",
+                description: 
+`*Make AI Accessible.* 
+
+AI 도입 과정의 장벽을 낮추는 AI 인프라 혁신 기업 래블업은 클라우드 컴퓨팅과 인공지능(AI) 기술을 통해 컴퓨팅 기반 연구 및 서비스의 새로운 패러다임을 선도합니다.
+
+업계를 선도하는 GPU 가상화 기술을 제공하는 [Backend.AI](https://www.backend.ai/ko)는 개발자들이 사용하기 쉬운 플랫폼입니다. 클라우드, 온프레미스, 또는 그 중간 어디에 있더라도, Backend.AI는 여러분에게 맞춘 유연한 백엔드 인프라가 되어 드립니다.`,
+            },
+            {
+                name: "WhaTap Labs",
+                logoUrl: whatapLogo.src,
+                url: "https://www.whatap.io/",
+                description: "WhaTap Labs 에서는 IT 모니터링 서비스인 “WhaTap”으로, 개발자와 운영자가 IT 서비스를 더 쉽고 안정적으로 운영할 수 있도록 하고 있습니다."
+            }
         ]
     },
     {
@@ -65,6 +90,29 @@ export const sponsors = [
         showPopup: true,
         list: [
             
+        ]
+    },
+    {
+        sponsorLevelName: "Media",
+        sizeOnLargeScreen: 3,
+        sizeOnMediumScreen: 3,
+        sizeOnSmallScreen: 2,
+        showPopup: true,
+        list: [
+            {
+                name: "한빛미디어",
+                logoUrl: hanbitMediaLogo.src,
+                url: "https://www.hanbit.co.kr/media",
+                dark: false,
+                description: 
+`한빛미디어(주)는 책으로 여는 IT 세상을 만들고 있습니다.
+
+우리 시대의 주역들을 위한 프로그래밍, 컴퓨터 공학, IT 에세이와 더불어 일반 사용자를 위한 OA, 그래픽 등 IT 활용서와 나와 내 아이를 위한 실용서까지 다양한 분야의 책으로 IT 세상을 만들어 가고 있습니다.
+                
+IT 전문가와 미래의 전문가를 꿈꾸는 이의 동반자로 30년 한 길을 걸어온 한빛미디어(주)는 앞으로도 여러분과 함께 그려가는 멋진 미래를 꿈꾸며 '책으로 여는 IT 세상'을 만들어 가겠습니다. 한빛미디어가 만드는 IT뉴스레터 데브잇냥에도 많은 응원 부탁드립니다.
+                
+😸데브잇냥 구독하기 [https://hanbit.co.kr/devletter/](https://hanbit.co.kr/devletter/)`
+            }
         ]
     },
 ]

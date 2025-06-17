@@ -1,10 +1,12 @@
 
 import { useState, type MouseEvent } from "react";
 import * as m from "../paraglide/messages.js";
+import { Remark } from "react-remark";
 type SponsorLogoAndModalProps = {
     name: string,
     level: string,
     logoImageSrc: string,
+    dark: boolean,
     description: string,
     url: string,
     showPopup: Boolean
@@ -22,11 +24,11 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
     return (
         <>
             <button className="p-button--base" onClick={() => {
-                    if(props.showPopup) { 
-                        setModalOpen(true); 
-                        document.addEventListener("keydown", closeKeyListener);
-                    }
-                }} aria-controls="modal">
+                if(props.showPopup) { 
+                    setModalOpen(true); 
+                    document.addEventListener("keydown", closeKeyListener);
+                }
+            }} aria-controls="modal" style={{ height: "100%" }}>
                 <img src={props.logoImageSrc} alt={props.name} loading="lazy"/>
             </button>
            
@@ -36,12 +38,12 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                     <h2 className="p-modal__title" id="modal-title">{m.sponsor_about()}</h2>
                     <button className="p-modal__close" aria-label="Close active modal" aria-controls="modal" onClick={closeHandler}>Close</button>
                 </header>
-                <img src={props.logoImageSrc} alt={props.name} />
+                <img src={props.logoImageSrc} alt={props.name} style={{ width: "100%" }} />
                 <h1>{props.name}</h1>
                 <b>{props.level}</b>
-                <p>
+                <Remark>
                     {props.description}
-                </p>
+                </Remark>
                 <footer className="p-modal__footer">
                 <a href={props.url}><button className="p-button--positive u-no-margin--bottom">{m.visit_website()}</button></a>
                 </footer>
