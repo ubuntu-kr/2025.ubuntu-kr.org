@@ -102,12 +102,6 @@ export const WebsiteConfig = {
                 target: "_blank"
             },
             {
-                label: m.nav_programs_cfp(),
-                link: `/cfp`,
-                class: "p-button--positive",
-                target: "_blank"
-            },
-            {
                 label: m.nav_sponsors_become(),
                 link: `/${locale}/sponsors/become-a-sponsor`,
                 class: "p-button"
