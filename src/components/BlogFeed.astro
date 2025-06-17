@@ -13,9 +13,9 @@ const blogItemsXml = blogFeedXml.querySelectorAll("item");
 const blogItems = new Array();
 blogItemsXml.forEach((el: Element) => {
     blogItems.push({
-        title: el.querySelector("title")?.innerHTML,
-        link: el.querySelector("link")?.innerHTML,
-        date: el.querySelector("pubDate")?.innerHTML,
+        title: el.querySelector("title")?.textContent,
+        link: el.querySelector("link")?.textContent,
+        date: el.querySelector("pubDate")?.textContent,
         content: el.querySelector("description")?.textContent?.replace(/(<([^>]+)>)/gi, ""),
     });
 });

@@ -23,7 +23,7 @@ import SponsorLogoAndModal from "@components/SponsorLogoAndModal.tsx";
                                     <SponsorLogoAndModal
                                         name={item.name}
                                         logoImageSrc={item.logoUrl}
-                                        description={item.description}
+                                        description={item.description ?? ""}
                                         url={item.url}
                                         level={level.sponsorLevelName}
                                         showPopup={level.showPopup}
