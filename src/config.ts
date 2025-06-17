@@ -39,6 +39,10 @@ export const WebsiteConfig = {
                 {
                     label: m.nav_programs_timetable(),
                     link: "https://events.canonical.com/event/126/timetable/"
+                },
+                {
+                    label: m.nav_programs_speakers(),
+                    link: "https://events.canonical.com/event/126/contributions/speakers"
                 }
             ]
         },
