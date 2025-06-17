@@ -6,7 +6,6 @@ type SponsorLogoAndModalProps = {
     name: string,
     level: string,
     logoImageSrc: string,
-    dark: boolean,
     description: string,
     url: string,
     showPopup: Boolean
