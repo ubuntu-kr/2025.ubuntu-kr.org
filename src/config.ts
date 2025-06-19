@@ -38,7 +38,7 @@ export const WebsiteConfig = {
                 },
                 {
                     label: m.nav_programs_timetable(),
-                    link: "https://events.canonical.com/event/126/timetable/"
+                    link: "https://events.canonical.com/event/126/timetable/?layout=room"
                 },
                 {
                     label: m.nav_programs_speakers(),
