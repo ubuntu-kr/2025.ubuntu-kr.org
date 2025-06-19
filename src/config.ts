@@ -125,9 +125,13 @@ export const WebsiteConfig = {
     },
     featuredSpeakers: {
         indicoExportUrl: "https://events.canonical.com/export/event/126.json?detail=contributions&occ=yes&pretty=yes",
-        contributionIds: [20, 46, 43, 34, 19],
-        speakerIds: [{ db_id: 522, user: 107 }, { db_id: 517, user: 166 }, { db_id: 494, user: 615 }, { db_id: 515, user: 628 }, { db_id: 516, user: 271 }, { db_id: 487, user: 3 }],
-        fullSchedulesUrl: "https://events.canonical.com/event/47/contributions/"
+        contributionIds: [27, 5, 16, 9, 2, 8],
+        speakerIds: [
+            { db_id: 981, user: 3035 }, { db_id: 979, user: 1123 }, { db_id: 978, user: 939 },
+            { db_id: 986, user: 4167 }, { db_id: 952, user: 4181 }, { db_id: 532, user: 4182 },
+            { db_id: 975, user: 4176 }, { db_id: 999, user: 836 },
+        ],
+        fullSchedulesUrl: "https://events.canonical.com/event/126/contributions/"
     },
     cityBanner: {
         cityImage: MicrosoftKoreaVenueImage.src

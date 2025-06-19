@@ -1,25 +1,27 @@
 
-import speaker489 from "@assets/speaker_picture/489.png";
-import speaker478 from "@assets/speaker_picture/478.jpeg";
-import speaker504 from "@assets/speaker_picture/504.jpeg";
-import speaker500 from "@assets/speaker_picture/500.png";
-import speaker532 from "@assets/speaker_picture/532.png";
-import speaker527 from "@assets/speaker_picture/527.png";
+import speaker981 from "@assets/speaker_picture/981.png";
+import speaker979 from "@assets/speaker_picture/979.jpeg";
+import speaker939 from "@assets/speaker_picture/939.jpeg";
+import speaker986 from "@assets/speaker_picture/986.png";
+import speaker952 from "@assets/speaker_picture/952.png";
+import speaker975 from "@assets/speaker_picture/975.png";
+import speaker999 from "@assets/speaker_picture/999.png";
 
 export const featuredSessionIds = [
-   371, 390, 397, 392, 374
+   689
 ];
-export const sessionListApiUrl = "https://events.canonical.com/export/event/47.json?detail=contributions&pretty=yes:";
-export const sessionListUrl = "https://events.canonical.com/event/47/contributions/";
+export const sessionListApiUrl = "https://events.canonical.com/export/event/126.json?detail=contributions&pretty=yes:";
+export const sessionListUrl = "https://events.canonical.com/event/126/contributions/";
 interface ImageMapType {
     [key: string]: ImageMetadata
   };
 
 export const speakerPersonIdPictureMap: ImageMapType = {
-    k489: speaker489,
-    k478: speaker478,
-    k504: speaker504,
-    k500: speaker500,
-    k532: speaker532,
-    k527: speaker527
+    k981: speaker981,
+    k979: speaker979,
+    k939: speaker939,
+    k986: speaker986,
+    k952: speaker952,
+    k975: speaker975,
+    k999: speaker999
 }
