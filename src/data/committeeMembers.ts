@@ -125,5 +125,21 @@ export const committeeMembers = [
             m.role_contents()
         ],
         profileImageUrl: "https://discourse.ubuntu-kr.org/user_avatar/discourse.ubuntu-kr.org/zeroday0619/144/12832_2.png"
+    },
+    {
+        name: "Inah Hwang",
+        team: "",
+        role: [
+            m.role_sponsorship_finances()
+        ],
+        profileImageUrl: uck25Logo.src
+    },
+    {
+        name: "Han Lim",
+        team: "",
+        role: [
+            m.role_sponsorship_finances()
+        ],
+        profileImageUrl: uck25Logo.src
     }
 ]
