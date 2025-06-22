@@ -1,6 +1,7 @@
 import * as m from "../paraglide/messages.js";
 import uck25Logo from "@assets/logo.svg";
 import hoehyeongProfile from "@assets/committiee/hoehyeong.jpg";
+import inahProfile from "@assets/committiee/inahHwang.jpeg";
 
 export const committeeMembers = [
     {
@@ -128,11 +129,11 @@ export const committeeMembers = [
     },
     {
         name: "Inah Hwang",
-        team: "",
+        team: "Ubuntu Korea Community",
         role: [
             m.role_sponsorship_finances()
         ],
-        profileImageUrl: uck25Logo.src
+        profileImageUrl: inahProfile.src
     },
     {
         name: "Han Lim",
