@@ -1,5 +1,7 @@
 import * as m from "../paraglide/messages.js";
 import uck25Logo from "@assets/logo.svg";
+import hoehyeongProfile from "@assets/committiee/hoehyeong.jpg";
+
 export const committeeMembers = [
     {
         name: "Junsang Mun",
@@ -94,7 +96,7 @@ export const committeeMembers = [
             m.role_web_video(),
             m.role_contents()
         ],
-        profileImageUrl: "https://discourse.ubuntu-kr.org/user_avatar/discourse.ubuntu-kr.org/hothead-jung/144/12047_2.png"
+        profileImageUrl: hoehyeongProfile.src
     },
     {
         name: "Tae Yong Lee",
