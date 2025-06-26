@@ -44,7 +44,7 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                     {props.description}
                 </Remark>
                 <footer className="p-modal__footer">
-                <a href={props.url}><button className="p-button--positive u-no-margin--bottom">{m.visit_website()}</button></a>
+                <a href={props.url} target="_blank"><button className="p-button--positive u-no-margin--bottom">{m.visit_website()}</button></a>
                 </footer>
             </section>
             </div>
