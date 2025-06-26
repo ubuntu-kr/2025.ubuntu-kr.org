@@ -27,8 +27,8 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                     setModalOpen(true); 
                     document.addEventListener("keydown", closeKeyListener);
                 }
-            }} aria-controls="modal" style={{ height: "100%" }}>
-                <img src={props.logoImageSrc} alt={props.name} loading="lazy"/>
+            }} aria-controls="modal" style={{ width: "100%" }}>
+                <img src={props.logoImageSrc} alt={props.name} loading="lazy" style={{ minWidth: "80%" }}/>
             </button>
            
             <div className="p-modal" id="modal" style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
