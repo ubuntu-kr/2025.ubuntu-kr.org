@@ -2,7 +2,7 @@
 
 import * as m from "./paraglide/messages.js";
 import UCKLogo from './assets/logo.svg'
-import MicrosoftKoreaVenueImage from '@assets/hall.png'
+import MicrosoftKoreaVenueImage from '@assets/hall.jpg'
 import UbuConKoreaLogo from "@assets/UbuntuKorea.svg"
 
 export interface SubMenuItem {
