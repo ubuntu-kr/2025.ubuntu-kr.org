@@ -3,7 +3,7 @@ import { getRelativeLocaleUrlList } from 'astro:i18n';
 import { WebsiteConfig } from "../../../config";
 import * as m from "../../../paraglide/messages.js";
 import Shell from "../../../layouts/Shell.astro"
-import { languageTag } from 'src/paraglide/runtime';
+import { languageTag } from '../../../paraglide/runtime';
 
 export function getStaticPaths() {
 	return getRelativeLocaleUrlList().map((locale) => {

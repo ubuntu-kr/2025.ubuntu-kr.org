@@ -2,6 +2,7 @@
 import { WebsiteConfig } from "../config";
 import eventLogo from "@assets/logo.svg";
 import * as m from "../paraglide/messages.js";
+import { languageTag } from "../paraglide/runtime";
 
 const indicoResponse = await fetch(WebsiteConfig.featuredSpeakers.indicoExportUrl);
 const indicoResJson = await indicoResponse.json();
@@ -75,7 +76,7 @@ for (const session of featuredSessions) {
     </div>
             <div class="row">
                 <div class="col-12">
-                    <a href={WebsiteConfig.featuredSpeakers.fullSchedulesUrl} target="_blank" class="p-button">
+                    <a href={`programs/timetable`} class="p-button">
                         {m.featuredBanner_button()}
                     </a>
                 </div>
