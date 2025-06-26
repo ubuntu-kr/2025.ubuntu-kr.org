@@ -37,31 +37,32 @@ import insideVenue from "@assets/inside_venue.png";
 
 ### 13층
 
-<p>
-<img src={insideVenue.src} alt="한국마이크로소프트 13층 지도. 가장 안쪽부터 Jeju, Donghae, Dokdo 홀이 있고, 주 입구로 들어가면 오른쪽에 Reception이, Reception에서 더 안쪽으로 들어가면 Rest Area가 나온다. 엘리베이터 홀에서 오른쪽으로 꺾은 뒤의 왼쪽은 주 출입구, 오른쪽은 화장실로 구성되어 있다. 비상 출구는 Jeju 홀 반대편에 있다."/>
-</p>
-
-- Reception: 등록 및 안내
-- Hall(제주, 동해, 독도): 워크샵, 강연 및 BoF
-- Rest Area: 간단한 다과 및 음료 제공, 휴식
+<div className="grid-row">
+    <div className="grid-col-4 ">
+        <img src={insideVenue.src} alt="한국마이크로소프트 13층 지도. 가장 안쪽부터 Jeju, Donghae, Dokdo 홀이 있고, 주 입구로 들어가면 오른쪽에 Reception이, Reception에서 더 안쪽으로 들어가면 Rest Area가 나온다. 엘리베이터 홀에서 오른쪽으로 꺾은 뒤의 왼쪽은 주 출입구, 오른쪽은 화장실로 구성되어 있다. 비상 출구는 Jeju 홀 반대편에 있다."/>
+    </div>
+    <div className="grid-col-4 ">
+        - Reception: 등록 및 안내
+        - Hall(제주, 동해, 독도): 워크샵, 강연 및 BoF
+        - Rest Area: 휴식
+    </div>
+</div>
 
 #### Hall
 
-> 개회, 폐회, 키 사이닝 파티, 라이트닝 토크 등 일부 행사는 홀 사이의 칸막이를 제거하여 전체 홀 통합으로 진행됩니다.
+<div className="grid-row">
+    <div className="grid-col-4 ">
+        <img src={hall.src} alt="4개의 의자가 놓인 긴 책상과 통유리 창으로 구성된 홀" />
+    </div>
+    <div className="grid-col-4">
+        > 개회, 폐회, 키 사이닝 파티, 라이트닝 토크 등 일부 행사는 홀 사이의 칸막이를 제거하여 전체 홀 통합으로 진행됩니다.
 
-<p>
-<img src={hall.src} alt="4개의 의자가 놓인 긴 책상과 통유리 창으로 구성된 홀" />
-</p>
+        - 독도(약 18명 수용): 워크샵 및 BoF
+        - 동해(약 32명 수용), 제주(약 62명 수용): 강연
 
-- 독도(약 18명 수용): 강연 및 BoF
-- 동해(약 32명 수용): 워크샵
-- 제주(약 62명 수용): 강연
-
-책상에 비치된 멀티탭을 이용하여 전자기기의 충전이 가능하며, WiFi는 행사 당일 워크숍 등 WiFi가 필수적으로 필요한 세션과 행사 관계자에 한해서만 제공합니다.
-
-#### Reception
-
-티켓을 구매한 참가자는 이곳에서 체크인하실 수 있습니다. 각종 문의와 안내도 이뤄집니다.
+        책상에 비치된 멀티탭을 이용하여 전자기기의 충전이 가능하며, WiFi는 행사 당일 워크숍 등 WiFi가 필수적으로 필요한 세션과 행사 관계자에 한해서만 제공합니다.    
+    </div>
+</div>
 
 ### 12층
 
@@ -75,219 +76,245 @@ import insideVenue from "@assets/inside_venue.png";
 
 지하철 1호선, 3호선, 5호선을 이용하여 행사장에 방문하실 수 있습니다.
 
-#### 지하철 1호선
+<div className="row">
+    <div className="col-4" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        #### 지하철 1호선
+        1호선 **종각역**에서 하차하셔서 **2번 출구**로 나오신 후, 서울공예박물관을 앞에 두고 좌회전하세요. 광화문이 시야에 들어올 때까지 직진하신 후, 한국마이크로소프트 간판이 상단에 자리한 건물로 입장하시면 됩니다.
+        <div>
+            <a className="p-button has-icon" href="https://naver.me/FS5MNxrN">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="http://kko.to/S0VU3VN9lK">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
+    <div className="col-4" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        #### 지하철 3호선
 
-1호선 **종각역**에서 하차하셔서 **2번 출구**로 나오신 후, 서울공예박물관을 앞에 두고 좌회전하세요. 광화문이 시야에 들어올 때까지 직진하신 후, 한국마이크로소프트 간판이 상단에 자리한 건물로 입장하시면 됩니다.
+        3호선 **안국역**에서 하차하셔서 **1번** 혹은 **6번 출구**로 나오신 후, 광화문이 시야에 들어올 때까지 직진하세요. 왼편에 위치하고 있으며, 한국마이크로소프트 간판이 상단에 자리한 건물입니다.
+        <div>
+            <a className="p-button has-icon" href="https://naver.me/52TDPhzv">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="http://kko.to/Ytc0aE3skx">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
+    <div className="col-4" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        #### 지하철 5호선
 
-<div>
-    <a className="p-button has-icon" href="https://naver.me/FS5MNxrN">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="http://kko.to/S0VU3VN9lK">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
-</div>
-
-#### 지하철 3호선
-
-3호선 **안국역**에서 하차하셔서 **1번** 혹은 **6번 출구**로 나오신 후, 광화문이 시야에 들어올 때까지 직진하세요. 왼편에 위치하고 있으며, 한국마이크로소프트 간판이 상단에 자리한 건물입니다.
-
-<div>
-    <a className="p-button has-icon" href="https://naver.me/52TDPhzv">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="http://kko.to/Ytc0aE3skx">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
-</div>
-
-#### 지하철 5호선
-
-5호선 **광화문역**에서 하차하셔서 **2번 출구**로 나오셔서 직진하신 후, 대한민국 역사박물관과 의정부터 발굴 현장 사이에 난 길로 진입하세요. 1층에 폴바셋이 위치한 건물로 입장하시면 됩니다.
-
-<div>
-    <a className="p-button has-icon" href="https://naver.me/xQ8Yrlme">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="http://kko.to/szcUh799Qg">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
+        5호선 **광화문역**에서 하차하셔서 **2번 출구**로 나오셔서 직진하신 후, 대한민국 역사박물관과 의정부터 발굴 현장 사이에 난 길로 진입하세요. 1층에 폴바셋이 위치한 건물로 입장하시면 됩니다.
+        <div>
+            <a className="p-button has-icon" href="https://naver.me/xQ8Yrlme">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="http://kko.to/szcUh799Qg">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
 </div>
 
 ## 안전 및 보건 정보
 
 모든 참가자에게 안전한 환경을 제공하기 위해, 모든 참가자는 행동강령을 준수해야 합니다. ([UbuCon Korea 2024 소개 페이지에서 세부사항 확인](/ko/about)) 행사장 입장과 컨퍼런스 디너 및 그룹투어 등 부대행사 참여시 명찰을 꼭 착용하시기 바랍니다. 명찰이 없는 사람은 추방되거나 입장이 거부될 수 있습니다.
 
-### 긴급 정보
+### 긴급 전화
 
 - [경찰: 112](tel:112)
 - [소방/응급: 119](tel:119)
 - [관광안내전화: 1330](tel:1330)
 
-#### 가까운 경찰서, 소방서 및 병원
+### 인근 기관
 
-##### 청진파출소
+#### 경찰서
 
-- [전화: +82-2-3701-4313](tel:+82-2-3701-4313)
+<div className="row" style={{ gap: 0 }}>
+    <div className="col-4">
+        ##### 청진파출소
 
-<div>
-    <a className="p-button has-icon" href="https://goo.gl/maps/1zqifTDFTNKBMmch6">
-        <i className="p-icon--external-link"></i>
-        <span>Google 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://naver.me/GnGIWl7D">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://place.map.kakao.com/14657566">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
+        - [전화: +82-2-3701-4313](tel:+82-2-3701-4313)
+
+        <div>
+            <a className="p-button has-icon" href="https://goo.gl/maps/1zqifTDFTNKBMmch6">
+                <i className="p-icon--external-link"></i>
+                <span>Google 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://naver.me/GnGIWl7D">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://place.map.kakao.com/14657566">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
+    <div className="col-4">
+        ##### 서울종로경찰서
+
+        - [전화: +82-2-3701-4324](tel:+82-2-3701-4324)
+
+        <div>
+            <a className="p-button has-icon" href="https://goo.gl/maps/H2PedhCiyQCXLgt77">
+                <i className="p-icon--external-link"></i>
+                <span>Google 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://naver.me/FpXwa33l">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://place.map.kakao.com/7935719">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
 </div>
 
-##### 서울종로경찰서
+#### 소방서
 
-- [전화: +82-2-3701-4324](tel:+82-2-3701-4324)
+<div className="row" style={{ gap: 0 }}>
+    <div className="col-4">
+        ##### 종로소방서
 
-<div>
-    <a className="p-button has-icon" href="https://goo.gl/maps/H2PedhCiyQCXLgt77">
-        <i className="p-icon--external-link"></i>
-        <span>Google 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://naver.me/FpXwa33l">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://place.map.kakao.com/7935719">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
+        - [전화: +82-2-6981-5674](tel:+82-2-6981-5674)
+
+        <div>
+            <a className="p-button has-icon" href="https://goo.gl/maps/UNXp7mCCupJKwqrNA">
+                <i className="p-icon--external-link"></i>
+                <span>Google 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://naver.me/Fn2miFBn">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://place.map.kakao.com/23256271">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
 </div>
 
-##### 종로소방서
+#### 병원
 
-- [전화: +82-2-6981-5674](tel:+82-2-6981-5674)
+<div className="row" style={{ gap: 0 }}>
+    <div className="col-4" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        ##### 강북삼성병원
 
-<div>
-    <a className="p-button has-icon" href="https://goo.gl/maps/UNXp7mCCupJKwqrNA">
-        <i className="p-icon--external-link"></i>
-        <span>Google 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://naver.me/Fn2miFBn">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://place.map.kakao.com/23256271">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
+        - 서대문역 인근의 **상급종합병원**
+        - [전화: +82-2-1599-8114](tel:+82-2-1599-8114)
+        - [전화(해외): +82-2-2001-5100](tel:+82-2-2001-5100)
+
+        <div>
+            <a className="p-button has-icon" href="https://goo.gl/maps/r6ogT35Y462JQfMA8">
+                <i className="p-icon--external-link"></i>
+                <span>Google 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://naver.me/5DH37gjX">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://place.map.kakao.com/8178752">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
+    <div className="col-4" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        ##### 세란병원
+
+        - 독립문역 인근의 **종합병원**
+        - [전화: +82-2-737-0181](tel:+82-2-737-0181)
+
+        <div>
+            <a className="p-button has-icon" href="https://goo.gl/maps/sFQHYZskq44WhCp77">
+                <i className="p-icon--external-link"></i>
+                <span>Google 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://naver.me/GxORR2od">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://place.map.kakao.com/7947236">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
+    <div className="col-4" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        ##### 서울대학교병원
+
+        - 혜화역 인근의 **상급종합병원**
+        - [전화: +82-2-1588-5700](tel:+82-2-1588-5700)
+        - [전화(해외): +82-2-2072-0505](tel:+82-2-2072-0505)
+
+        <div>
+            <a className="p-button has-icon" href="https://goo.gl/maps/ihCriSJSAQposZR28">
+                <i className="p-icon--external-link"></i>
+                <span>Google 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://naver.me/xKQWNyWQ">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://place.map.kakao.com/13565525">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
+    <div className="col-4" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        ##### 국립중앙의료원
+
+        - 동대문역사문화공원역 인근의 **종합병원**
+        - [전화: +82-2-2260-7114](tel:+82-2-2260-7114)
+
+        <div>
+            <a className="p-button has-icon" href="https://goo.gl/maps/NfGSCxZWRYHyaks89">
+                <i className="p-icon--external-link"></i>
+                <span>Google 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://naver.me/FuVEJHgh">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://place.map.kakao.com/11952764">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
+    <div className="col-4" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        ##### 세브란스병원
+
+        - 신촌역 인근의 **상급종합병원**
+        - [전화: +82-2-1599-1004](tel:+82-2-1599-1004)
+        - [전화 (해외): +82-2-2228-1004](tel:+82-2-2228-1004)
+
+        <div>
+            <a className="p-button has-icon" href="https://goo.gl/maps/mpSsSmv7GjSMMDCP8">
+                <i className="p-icon--external-link"></i>
+                <span>Google 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://naver.me/GJrFT2S7">
+                <i className="p-icon--external-link"></i>
+                <span>네이버 지도</span>
+            </a>
+            <a className="p-button has-icon" href="https://place.map.kakao.com/26822101">
+                <i className="p-icon--external-link"></i>
+                <span>카카오맵</span>
+            </a>
+        </div>
+    </div>
 </div>
 
-##### 강북삼성병원
-
-- 서대문역 인근의 **상급종합병원**
-- [전화: +82-2-1599-8114](tel:+82-2-1599-8114)
-- [전화(해외): +82-2-2001-5100](tel:+82-2-2001-5100)
-
-<div>
-    <a className="p-button has-icon" href="https://goo.gl/maps/r6ogT35Y462JQfMA8">
-        <i className="p-icon--external-link"></i>
-        <span>Google 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://naver.me/5DH37gjX">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://place.map.kakao.com/8178752">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
-</div>
-
-##### 세란병원
-
-- 독립문역 인근의 **종합병원**
-- [전화: +82-2-737-0181](tel:+82-2-737-0181)
-
-<div>
-    <a className="p-button has-icon" href="https://goo.gl/maps/sFQHYZskq44WhCp77">
-        <i className="p-icon--external-link"></i>
-        <span>Google 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://naver.me/GxORR2od">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://place.map.kakao.com/7947236">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
-</div>
-
-##### 서울대학교병원
-
-- 혜화역 인근의 **상급종합병원**
-- [전화: +82-2-1588-5700](tel:+82-2-1588-5700)
-- [전화(해외): +82-2-2072-0505](tel:+82-2-2072-0505)
-
-<div>
-    <a className="p-button has-icon" href="https://goo.gl/maps/ihCriSJSAQposZR28">
-        <i className="p-icon--external-link"></i>
-        <span>Google 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://naver.me/xKQWNyWQ">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://place.map.kakao.com/13565525">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
-</div>
-
-##### 국립중앙의료원
-
-- 동대문역사문화공원역 인근의 **종합병원**
-- [전화: +82-2-2260-7114](tel:+82-2-2260-7114)
-
-<div>
-    <a className="p-button has-icon" href="https://goo.gl/maps/NfGSCxZWRYHyaks89">
-        <i className="p-icon--external-link"></i>
-        <span>Google 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://naver.me/FuVEJHgh">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://place.map.kakao.com/11952764">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
-</div>
-
-##### 세브란스병원
-
-- 신촌역 인근의 **상급종합병원**
-- [전화: +82-2-1599-1004](tel:+82-2-1599-1004)
-- [전화 (해외): +82-2-2228-1004](tel:+82-2-2228-1004)
-
-<div>
-    <a className="p-button has-icon" href="https://goo.gl/maps/mpSsSmv7GjSMMDCP8">
-        <i className="p-icon--external-link"></i>
-        <span>Google 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://naver.me/GJrFT2S7">
-        <i className="p-icon--external-link"></i>
-        <span>네이버 지도</span>
-    </a>
-    <a className="p-button has-icon" href="https://place.map.kakao.com/26822101">
-        <i className="p-icon--external-link"></i>
-        <span>카카오맵</span>
-    </a>
-</div>
