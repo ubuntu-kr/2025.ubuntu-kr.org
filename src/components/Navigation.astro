@@ -1,5 +1,4 @@
 ---
-import { getRelativeLocaleUrlList } from 'astro:i18n';
 import { WebsiteConfig } from "../config";
 import type { SubMenuItem } from "../config";
 import UbuntuKrCircleWhite from "@assets/UbuntuKrCircleWhite.svg"
@@ -17,9 +16,7 @@ import UbuntuKrCircleWhite from "@assets/UbuntuKrCircleWhite.svg"
                             alt=""
                         />
                     </div>
-                    <span class="p-navigation__logo-title"
-                        >{WebsiteConfig.siteTitle}</span
-                    >
+                    <span class="p-navigation__logo-title">{WebsiteConfig.siteTitle}</span>
                 </a>
             </div>
             <a href="#navigation"

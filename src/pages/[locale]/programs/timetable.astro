@@ -1,0 +1,345 @@
+---
+import { getRelativeLocaleUrlList } from 'astro:i18n';
+import { WebsiteConfig } from "../../../config";
+import * as m from "../../../paraglide/messages.js";
+import Shell from "../../../layouts/Shell.astro"
+import { languageTag } from '../../../paraglide/runtime';
+
+export function getStaticPaths() {
+	return getRelativeLocaleUrlList().map((locale) => {
+		let localeItem = locale.split('/')[1];
+		return {
+			params: { locale: localeItem },
+		};
+	});
+}
+
+const indicoResponse = await fetch(WebsiteConfig.timetable.indicoExportUrl);
+const indicoResJson = await indicoResponse.json();
+const sessions = Object.values(
+      Object.values(
+        Object.values(indicoResJson.results as Object)[0] as Object
+      )[0] as Object
+    ) ?? null;
+
+const contResponse = await fetch(WebsiteConfig.featuredSpeakers.indicoExportUrl);
+const contResJson = await contResponse.json();
+const fullSessionInfo = contResJson.results
+    ? contResJson.results[0].contributions
+    : null;
+
+const halls = WebsiteConfig.timetable.halls;
+const lastUpdate = new Intl.DateTimeFormat(languageTag(), { 
+  dateStyle: "long", timeStyle: "medium"
+}).format(new Date());
+
+sessions.sort(function(a:any, b: any) {
+  const aTime = Date.parse(`${a.startDate.date}T${a.startDate.time}Z`);
+  const bTime = Date.parse(`${b.startDate.date}T${b.startDate.time}Z`);
+
+  if (aTime > bTime) {
+    return 1
+  } else {
+    return -1
+  }
+});
+---
+
+<Shell title={m.nav_programs_timetable()}>
+<div class="p-section p-strip is-shallow">
+    <div class="grid-row">
+        <h1>{m.nav_programs_timetable()}</h1>
+        <p>{m.timetable_description()}</p>
+        <hr class="p-rule">
+        <p id="timetable-guide" class="grid-col-8">
+          <span id="table-guide">
+            <span class="timetable-index">
+              <span class="difficulty">★</span>
+              <span>{m.timetable_difficulty()}</span>
+            </span>
+            <span class="timetable-index">
+              <span class="featured">●</span>
+              <span>{m.timetable_featured()}</span>
+            </span>
+          </span>
+          <span class="timetable-index">
+            <i class="p-icon--show" />
+            <span>{m.timetable_update()}</span>
+            <span>{lastUpdate}</span>
+          </span>
+        </p>
+        <section class="p-tabs">
+          <div class="p-tabs__list u-no-print" role="tablist" aria-label="timetable">
+            {halls.map((hall, idx) => {
+              const key = `timetable_${hall}` as keyof typeof m;
+              const label = typeof m[key] === "function" ? (m[key] as () => string)() : "";
+              return (
+                <div class="p-tabs__item">
+                  <button class="p-tabs__link" role="tab" aria-selected={idx === 0 ? "true" : "false"} aria-controls={`${hall}-tab`} id={hall} tabindex={idx === 0 ? "0" : "-1"}>
+                    {label}
+                  </button>
+                </div>
+              );
+            })}
+            <div class="p-tabs__item">
+              <a class="p-tabs__link" id="full" href={WebsiteConfig.timetable.showDetails} target="_blank" tabindex="0">
+                <span>{m.timetable_full()}(Indico)</span>
+                <i class="p-icon--external-link" />
+              </a>
+            </div>
+          </div>
+
+          {halls.map((hall, idx) => {
+            const key = `timetable_${hall}` as keyof typeof m;
+            const label = typeof m[key] === "function" ? (m[key] as () => string)() : "";
+            return (
+              <table tabindex="0" role="tabpanel" id={`${hall}-tab`} aria-labelledby={hall} hidden={idx !== 0 ? "hidden" : ""} class="u-table-layout--auto">
+                <thead>
+                  <th>{m.timetable_time()}</th>
+                  <th>{label}</th>
+                </thead>
+                <tbody>
+                  {sessions.filter((s:any) => s.room.toLowerCase().includes(hall) || s.room === "").map((s:any) => {
+                    const contributions = fullSessionInfo.filter((c:any) => c.friendly_id === s.friendlyId);
+                    return (
+                    <tr>
+                      <th>{s.startDate.time.slice(0, -3)}</th>
+                      <td>
+                        <a href={s.url ? `${WebsiteConfig.timetable.baseUrl}${s.url}` : "#"} target="_blank" class="p-button--base">
+                          {contributions.length > 0 && contributions[0].type ? (
+                            <span class={
+                              contributions[0].type.includes("Lightning") ? "p-chip--caution" :
+                              contributions[0].type.includes("Talk") ? "p-chip--information" :
+                              contributions[0].type.includes("Workshop") ? "p-chip--positive" :
+                              "p-chip"
+                            }>
+                              {contributions[0].type}
+                            </span>
+                          ):""}
+                          <h2 class="p-heading--4">
+                          {s.title}
+                          {WebsiteConfig.featuredSpeakers.contributionIds.includes(s.friendlyId) ? (
+                            <span class="featured">●</span>
+                          ):""}  
+                          </h2>
+                          <ul class="info u-text--muted">
+                            {s.presenters && s.presenters.length > 0 ? (
+                              <li>
+                                <i class="p-icon--user" />
+                                <span>
+                                {s.presenters.map((speaker: { displayOrderKey: string[], affiliation: string }, idx: number) => (
+                                  <>
+                                    {idx > 0 ? ", " : ""}
+                                    {speaker.displayOrderKey[1]}
+                                    {speaker.affiliation ? ` (${speaker.affiliation})` :""}
+                                  </>
+                                ))}
+                                </span>
+                              </li>
+                            ) : ""}
+                            {contributions.length > 0 && contributions[0].track ? (
+                              <li>
+                                <i class="p-icon--topic" />
+                                <span>{contributions[0].track}</span>
+                              </li>
+                            ):""}
+                            {WebsiteConfig.timetable.difficulty.beginner.includes(s.friendlyId) ? (
+                              <li>
+                                <i class="p-icon--help" />
+                                <span>{m.timetable_difficulty()}</span>
+                                <span class="difficulty">★☆☆☆☆</span>
+                              </li>
+                            ): ""}
+                            {WebsiteConfig.timetable.difficulty.intermediate.includes(s.friendlyId) ? (
+                              <li>
+                                <i class="p-icon--help" />
+                                <span>{m.timetable_difficulty()}</span>
+                                <span class="difficulty">★★★☆☆</span>
+                              </li>
+                            ): ""}
+                            {WebsiteConfig.timetable.difficulty.advanced.includes(s.friendlyId) ? (
+                              <li>
+                                <i class="p-icon--help" />
+                                <span>{m.timetable_difficulty()}</span>
+                                <span class="difficulty">★★★★★</span>
+                              </li>
+                            ): ""}
+                          </ul>
+                        </a>                         
+                      </td>
+                    </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+          )})}
+        </section>
+    </div>
+</div>
+</Shell>
+
+<script>
+  const keys = {
+  left: 'ArrowLeft',
+  right: 'ArrowRight',
+};
+
+const direction = {
+  ArrowLeft: -1,
+  ArrowRight: 1,
+};
+
+function attachEvents(tabs: Array<HTMLElement>) {
+  tabs.forEach(function(tab, index) {
+    tab.addEventListener('keyup', function(e) {
+      console.log(e.code);
+      if (e.code === keys.left || e.code === keys.right) {
+        switchTabOnArrowPress(e, tabs);
+      }
+    });
+
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+      setActiveTab(tab, tabs);
+    });
+
+    tab.addEventListener('focus', function() {
+      setActiveTab(tab, tabs);
+    });
+
+    tab.dataset.index = index.toString();
+  });
+}
+
+function switchTabOnArrowPress(event: KeyboardEvent, tabs: Array<HTMLElement>) {
+  const pressed = event.code as "ArrowLeft"|"ArrowRight";
+
+  if (direction[pressed]) {
+    const target = event.target as HTMLElement;
+    if (target) {
+      const index = parseInt(target.dataset.index ?? "", 10) ?? undefined;
+      if (index !== undefined && !isNaN(index)) {
+        if (tabs[index + direction[pressed]]) {
+          tabs[index + direction[pressed]].focus();
+        } else if (pressed === keys.left) {
+          tabs[tabs.length - 1].focus();
+        } else if (pressed === keys.right) {
+          tabs[0].focus();
+        }
+      }
+    }
+  }
+}
+
+function setActiveTab(tab: HTMLElement, tabs: Array<HTMLElement>) {
+  tabs.forEach(function(tabHTMLElement: HTMLElement) {
+    const tabContent = document.getElementById(tabHTMLElement.getAttribute('aria-controls') ?? "");
+
+    if (tabHTMLElement === tab && tabContent) {
+      tabHTMLElement.setAttribute('aria-selected', "true");
+      tabContent.removeAttribute('hidden');
+    } else if (tabContent) {
+      tabHTMLElement.setAttribute('aria-selected', "false");
+      tabContent.setAttribute('hidden', "true");
+    }
+  });
+}
+
+function initTabs(selector: string) {
+  const tabContainers = [].slice.call(document.querySelectorAll(selector));
+
+  tabContainers.forEach(function(tabContainer: HTMLElement) {
+    const tabs = [].slice.call(tabContainer.querySelectorAll('[aria-controls]'));
+    attachEvents(tabs);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  initTabs('[role="tablist"]');
+});
+</script>
+
+<style>
+  #table-guide, #timetable-guide {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  #timetable-guide {
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+
+  .timetable-index {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .difficulty {
+    color: #F08763;
+  }
+
+  .featured {
+    color: #9F6986;
+  }
+
+  table {
+    text-align: center;
+    width: 100%;
+  }
+
+  th {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  th:first-child {
+    width: 10%;
+  }
+
+  td a {
+    width: 100%;
+    text-align: start;
+  }
+
+  .info {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    align-items: center;
+  }
+
+  .info li {
+    display: inline-flex;
+    gap: 0.5em;
+    align-items: center;
+    padding-inline-end: 0.5em;
+  }
+
+  .info li i {
+    flex-shrink: 0;
+  }
+
+  .p-button--base {
+    padding: 0.5rem;
+  }
+
+  .p-button--base h2 {
+    padding: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  .p-chip, .p-chip--caution, .p-chip--information, .p-chip--positive {
+    margin: 0 0 0.25rem 0;
+    gap: 0.5rem;
+    align-items: center;
+  }
+</style>
+

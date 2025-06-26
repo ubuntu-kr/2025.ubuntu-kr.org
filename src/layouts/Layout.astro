@@ -46,6 +46,9 @@ const { title, description } = Astro.props;
 
 // Include all of Vanilla Framework
 @include vanilla;
+@include vf-p-icon-tag;
+@include vf-p-icon-topic;
+
 
 // Apply Keep-All and Web Font to Korean words
 body {
@@ -57,5 +60,11 @@ body {
 	object-fit: cover;
 	width: 100%;
 	aspect-ratio: 1/1;
+}
+
+.p-navigation__toggle--open, .p-navigation__toggle--close {
+	height: 100%;
+	text-align: center;
+	line-height: 2;
 }
 </style>
