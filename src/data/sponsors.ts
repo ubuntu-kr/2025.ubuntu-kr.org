@@ -120,7 +120,9 @@ IT 전문가와 미래의 전문가를 꿈꾸는 이의 동반자로 30년 한 �
                 description:
                     `
 요즘IT는 IT업계 현업 실무 전문가의 경험과 지식, 인사이트를 전하는 콘텐츠 플랫폼입니다. AI, 개발, 기획, 디자인 등 다양한 IT 실무 정보와 트렌드가 매일 올라오고, 뉴스레터 PICK IT을 통해 주 1회 큐레이션된 정보를 받아볼 수 있습니다. 실무 전문가의 신뢰할 만한 콘텐츠와 독자를 연결해, IT업계가 함께 학습하며 성장할 수 있는 선순환을 만드는 데 기여하고자 합니다. 요즘IT X에서 가끔 이벤트도 진행하니 놀러오세요! 
+
 👉요즘IT X: [https://x.com/yozm_it](https://x.com/yozm_it)
+
 👉요즘IT 인스타그램: [https://www.instagram.com/yozm.it/](https://www.instagram.com/yozm.it/)
 `
             }
