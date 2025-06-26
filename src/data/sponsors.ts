@@ -22,7 +22,7 @@ export const sponsors = [
                 url: "https://ubuntu.com/",
                 description: "Canonical은 대부분의 퍼블릭 클라우드 워크로드를 위한 OS이자 스마트 게이트웨이, 자율 주행 자동차 및 Advanced robot 등 새롭게 떠오르는 분야를 위한 OS인 Ubuntu를 개발 및 배포하는 회사입니다. Canonical은 상용 Ubuntu 사용자에게 엔터프라이즈 보안, 지원 및 서비스를 제공합니다."
             },
-            
+
         ]
     },
     {
@@ -38,7 +38,7 @@ export const sponsors = [
                 url: "https://azure.microsoft.com/en-us/ubuntu/?ocid=AID3035196",
                 description: "Microsoft는 지구상의 모든 사람과 조직이 더 많은 것을 성취할 수 있도록 역량을 지원하는 것을 사명으로 삼고 있습니다. Ubuntu 기반 워크로드는 Azure에서 가장 빠르게 성장하고 있는 워크로드 중 하나입니다. Microsoft는 Canonical과 제휴하여 Azure에서 동작하는 Ubuntu와 오픈 소스 커뮤니티 참여를 통해 Azure에 최적화된 커널, 개선된 성능, 고급 보안, 자동 패치 및 업데이트, 유연한 가격 책정 옵션을 제공합니다."
             },
-            
+
         ]
     },
     {
@@ -48,7 +48,7 @@ export const sponsors = [
         sizeOnSmallScreen: 3,
         showPopup: true,
         list: [
-            
+
         ]
     },
     {
@@ -68,8 +68,8 @@ export const sponsors = [
                 name: "Lablup",
                 logoUrl: lablupLogo.src,
                 url: "https://www.lablup.com/ko",
-                description: 
-`*Make AI Accessible.* 
+                description:
+                    `*Make AI Accessible.* 
 
 AI 도입 과정의 장벽을 낮추는 AI 인프라 혁신 기업 래블업은 클라우드 컴퓨팅과 인공지능(AI) 기술을 통해 컴퓨팅 기반 연구 및 서비스의 새로운 패러다임을 선도합니다.
 
@@ -90,7 +90,7 @@ AI 도입 과정의 장벽을 낮추는 AI 인프라 혁신 기업 래블업은 
         sizeOnSmallScreen: 2,
         showPopup: true,
         list: [
-            
+
         ]
     },
     {
@@ -104,8 +104,8 @@ AI 도입 과정의 장벽을 낮추는 AI 인프라 혁신 기업 래블업은 
                 name: "한빛미디어",
                 logoUrl: hanbitMediaLogo.src,
                 url: "https://www.hanbit.co.kr/media",
-                description: 
-`한빛미디어(주)는 책으로 여는 IT 세상을 만들고 있습니다.
+                description:
+                    `한빛미디어(주)는 책으로 여는 IT 세상을 만들고 있습니다.
 
 우리 시대의 주역들을 위한 프로그래밍, 컴퓨터 공학, IT 에세이와 더불어 일반 사용자를 위한 OA, 그래픽 등 IT 활용서와 나와 내 아이를 위한 실용서까지 다양한 분야의 책으로 IT 세상을 만들어 가고 있습니다.
                 
@@ -117,7 +117,12 @@ IT 전문가와 미래의 전문가를 꿈꾸는 이의 동반자로 30년 한 �
                 name: "요즘IT",
                 logoUrl: yozmitLogo.src,
                 url: "https://yozm.wishket.com",
-                description: "요즘IT는 IT업계 현업 실무 전문가들이 경험과 지식, 인사이트를 나누는 콘텐츠 플랫폼입니다. 좋은 콘텐츠 제공자, 신뢰할 만한 콘텐츠, 독자를 연결해 IT업계 생태계가 하나의 학습하는 조직으로서 선순환 성장하는 데 기여하고자 합니다. 해결하고 싶은 실무 문제, 커리어와 성장 고민 등 일하며 만나는 모든 문제를 각자가 필요에 따라 스스로 찾고 적용할 ‘실무 라이브러리’가 되고자 합니다."
+                description:
+                    `
+요즘IT는 IT업계 현업 실무 전문가의 경험과 지식, 인사이트를 전하는 콘텐츠 플랫폼입니다. AI, 개발, 기획, 디자인 등 다양한 IT 실무 정보와 트렌드가 매일 올라오고, 뉴스레터 PICK IT을 통해 주 1회 큐레이션된 정보를 받아볼 수 있습니다. 실무 전문가의 신뢰할 만한 콘텐츠와 독자를 연결해, IT업계가 함께 학습하며 성장할 수 있는 선순환을 만드는 데 기여하고자 합니다. 요즘IT X에서 가끔 이벤트도 진행하니 놀러오세요! 
+👉요즘IT X: [https://x.com/yozm_it](https://x.com/yozm_it)
+👉요즘IT 인스타그램: [https://www.instagram.com/yozm.it/](https://www.instagram.com/yozm.it/)
+`
             }
         ]
     },
