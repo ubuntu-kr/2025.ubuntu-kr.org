@@ -6,6 +6,7 @@ import hanbitMediaLogo from "@assets/sponsors/hanbit-media.svg";
 import lablupLogo from "@assets/sponsors/lablup.svg";
 import whatapLogo from "@assets/sponsors/whatap.png";
 import grometric from "@assets/sponsors/grometric.svg";
+import yozmitLogo from "@assets/sponsors/yozmit.svg";
 
 export const sponsors = [
     {
@@ -103,7 +104,6 @@ AI 도입 과정의 장벽을 낮추는 AI 인프라 혁신 기업 래블업은 
                 name: "한빛미디어",
                 logoUrl: hanbitMediaLogo.src,
                 url: "https://www.hanbit.co.kr/media",
-                dark: false,
                 description: 
 `한빛미디어(주)는 책으로 여는 IT 세상을 만들고 있습니다.
 
@@ -112,6 +112,12 @@ AI 도입 과정의 장벽을 낮추는 AI 인프라 혁신 기업 래블업은 
 IT 전문가와 미래의 전문가를 꿈꾸는 이의 동반자로 30년 한 길을 걸어온 한빛미디어(주)는 앞으로도 여러분과 함께 그려가는 멋진 미래를 꿈꾸며 '책으로 여는 IT 세상'을 만들어 가겠습니다. 한빛미디어가 만드는 IT뉴스레터 데브잇냥에도 많은 응원 부탁드립니다.
                 
 😸데브잇냥 구독하기 [https://hanbit.co.kr/devletter/](https://hanbit.co.kr/devletter/)`
+            },
+            {
+                name: "요즘IT",
+                logoUrl: yozmitLogo.src,
+                url: "https://yozm.wishket.com",
+                description: "요즘IT는 IT업계 현업 실무 전문가들이 경험과 지식, 인사이트를 나누는 콘텐츠 플랫폼입니다. 좋은 콘텐츠 제공자, 신뢰할 만한 콘텐츠, 독자를 연결해 IT업계 생태계가 하나의 학습하는 조직으로서 선순환 성장하는 데 기여하고자 합니다. 해결하고 싶은 실무 문제, 커리어와 성장 고민 등 일하며 만나는 모든 문제를 각자가 필요에 따라 스스로 찾고 적용할 ‘실무 라이브러리’가 되고자 합니다."
             }
         ]
     },
