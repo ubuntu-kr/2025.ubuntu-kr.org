@@ -38,7 +38,7 @@ export const WebsiteConfig = {
                 },
                 {
                     label: m.nav_programs_timetable(),
-                    link: "https://events.canonical.com/event/126/timetable/?layout=room"
+                    link: `/${locale}/programs/timetable`
                 },
                 {
                     label: m.nav_programs_speakers(),
@@ -132,6 +132,17 @@ export const WebsiteConfig = {
             { db_id: 975, user: 4176 }, { db_id: 999, user: 836 },
         ],
         fullSchedulesUrl: "https://events.canonical.com/event/126/contributions/"
+    },
+    timetable: {
+        halls: ["jeju", "donghae", "dokdo"],
+        indicoExportUrl: "https://events.canonical.com/export/timetable/126.json?occ=yes&pretty=yes",
+        baseUrl: "https://events.canonical.com",
+        showDetails: "https://events.canonical.com/event/126/timetable/?layout=room",
+        difficulty: {
+            beginner: [11, 4, 5, 19, 13, 6, 8],
+            intermediate: [9, 3, 12, 2, 1],
+            advanced: [20, 16]
+        }
     },
     cityBanner: {
         cityImage: MicrosoftKoreaVenueImage.src

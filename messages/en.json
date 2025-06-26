@@ -60,5 +60,22 @@
     "role_web_video": "Web and Video",
     "role_venue_safety": "Venue and Safety",
     "role_close": "Reset",
-    "role_search": "Search"
+    "role_search": "Search",
+    "timetable_description": "Check whole schedule of UbuCon Korea 2025",
+    "timetable_jeju": "Jeju",
+    "timetable_donghae": "Donghae",
+    "timetable_dokdo": "Dokdo",
+    "timetable_full": "Show All",
+    "timetable_time": "Time",
+    "timetable_12f": "Floor 12",
+    
+    "timetable_duration": "Duration",
+    "timetable_update": "Last Modified",
+    "timetable_speaker": "Speaker(s)",
+    "timetable_category": "Type",
+    "timetable_track": "Track",
+    "timetable_pdf": "Presentation Materials",
+    "timetable_featured": "Featured Session",
+    "timetable_difficulty": "Difficulty",
+    "timetable_details": "Show details"
 }
