@@ -30,7 +30,7 @@ const fullSessionInfo = contResJson.results
 
 const halls = WebsiteConfig.timetable.halls;
 const lastUpdate = new Intl.DateTimeFormat(languageTag(), { 
-  dateStyle: "long", timeStyle: "medium"
+  dateStyle: "long", timeStyle: "full", timeZone: "Asia/Seoul"
 }).format(new Date());
 
 sessions.sort(function(a:any, b: any) {
@@ -64,7 +64,7 @@ sessions.sort(function(a:any, b: any) {
           </span>
           <span class="timetable-index">
             <i class="p-icon--show" />
-            <span>{m.timetable_update()}</span>
+            <span class="index-title">{m.timetable_update()}</span>
             <span>{lastUpdate}</span>
           </span>
         </p>
@@ -271,11 +271,14 @@ document.addEventListener('DOMContentLoaded', function() {
     max-width: 100%;
   }
 
-
   .timetable-index {
     display: inline-flex;
     align-items: center;
     gap: 0.5em;
+  }
+
+  .index-title {
+    flex-shrink: 0;
   }
 
   .difficulty {
