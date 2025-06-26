@@ -106,6 +106,7 @@ sessions.sort(function(a:any, b: any) {
                       <th>{s.startDate.time.slice(0, -3)}</th>
                       <td>
                         <a href={s.url ? `${WebsiteConfig.timetable.baseUrl}${s.url}` : "#"} target="_blank" class="p-button--base">
+                          <span>
                           {contributions.length > 0 && contributions[0].type ? (
                             <span class={
                               contributions[0].type.includes("Lightning") ? "p-chip--caution" :
@@ -116,11 +117,22 @@ sessions.sort(function(a:any, b: any) {
                               {contributions[0].type}
                             </span>
                           ):""}
-                          <h2 class="p-heading--4">
-                          {s.title}
+                          {WebsiteConfig.timetable.difficulty.beginner.includes(s.friendlyId) ? (
+                            <span class="difficulty">★☆☆☆☆</span>
+                          ): ""}
+                          {WebsiteConfig.timetable.difficulty.intermediate.includes(s.friendlyId) ? (
+                            <span class="difficulty">★★★☆☆</span>
+                          ): ""}
+                          {WebsiteConfig.timetable.difficulty.advanced.includes(s.friendlyId) ? (
+                            <span class="difficulty">★★★★★</span>
+                          ): ""}
                           {WebsiteConfig.featuredSpeakers.contributionIds.includes(s.friendlyId) ? (
                             <span class="featured">●</span>
                           ):""}  
+                          </span>
+                          <h2 class="p-heading--4">
+                          {s.title}
+                          
                           </h2>
                           <ul class="info u-text--muted">
                             {s.presenters && s.presenters.length > 0 ? (
@@ -143,27 +155,6 @@ sessions.sort(function(a:any, b: any) {
                                 <span>{contributions[0].track}</span>
                               </li>
                             ):""}
-                            {WebsiteConfig.timetable.difficulty.beginner.includes(s.friendlyId) ? (
-                              <li>
-                                <i class="p-icon--help" />
-                                <span>{m.timetable_difficulty()}</span>
-                                <span class="difficulty">★☆☆☆☆</span>
-                              </li>
-                            ): ""}
-                            {WebsiteConfig.timetable.difficulty.intermediate.includes(s.friendlyId) ? (
-                              <li>
-                                <i class="p-icon--help" />
-                                <span>{m.timetable_difficulty()}</span>
-                                <span class="difficulty">★★★☆☆</span>
-                              </li>
-                            ): ""}
-                            {WebsiteConfig.timetable.difficulty.advanced.includes(s.friendlyId) ? (
-                              <li>
-                                <i class="p-icon--help" />
-                                <span>{m.timetable_difficulty()}</span>
-                                <span class="difficulty">★★★★★</span>
-                              </li>
-                            ): ""}
                           </ul>
                         </a>                         
                       </td>
@@ -309,6 +300,13 @@ document.addEventListener('DOMContentLoaded', function() {
     text-align: start;
   }
 
+  td a span {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.25rem;
+  }
+
   .info {
     list-style-type: none;
     margin: 0;
@@ -340,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   .p-chip, .p-chip--caution, .p-chip--information, .p-chip--positive {
-    margin: 0 0 0.25rem 0;
+    margin: 0 0 0 0;
     gap: 0.5rem;
     align-items: center;
   }
