@@ -7,6 +7,7 @@ import lablupLogo from "@assets/sponsors/lablup.svg";
 import whatapLogo from "@assets/sponsors/whatap.png";
 import grometric from "@assets/sponsors/grometric.svg";
 import yozmitLogo from "@assets/sponsors/yozmit.svg";
+import telechipsLogo from "@assets/sponsors/telechips.svg";
 
 export const sponsors = [
     {
@@ -22,7 +23,20 @@ export const sponsors = [
                 url: "https://ubuntu.com/",
                 description: "Canonical은 대부분의 퍼블릭 클라우드 워크로드를 위한 OS이자 스마트 게이트웨이, 자율 주행 자동차 및 Advanced robot 등 새롭게 떠오르는 분야를 위한 OS인 Ubuntu를 개발 및 배포하는 회사입니다. Canonical은 상용 Ubuntu 사용자에게 엔터프라이즈 보안, 지원 및 서비스를 제공합니다."
             },
+            {
+                name: "Telechips",
+                logoUrl: telechipsLogo.src,
+                url: "https://telechips.com",
+                description: `**미래를 위한 기술, 모두를 위한 모빌리티로 세상을 변화시킵니다.**
 
+텔레칩스는 차량용 반도체 분야에서 미래를 위한 혁신적인 기술을 바탕으로, IVIㆍCockpit, ADASㆍAI, MCU, Network gateway 등
+모두를 위한 스마트 모빌리티 실현에 다양한 솔루션을 제공합니다.
+우리는 기술을 연결하고 통합하는 시스템 반도체 기술이 곧 미래 모빌리티 경쟁력의 핵심이라는 확고한 신념을 바탕으로,
+고객 중심의 기술 혁신과 글로벌 협력을 통해 자동차 제조사와의 신뢰를 구축하며 지속적인 성장을 이루어오고 있습니다.
+앞으로도 텔레칩스는 새로운 기술과 가능성의 확장을 통해 세상을 변화시키며, 지속 가능한 내일을 향한 여정을 멈추지 않을 것입니다.
+
+반도체 기술로 연결된 미래 모빌리티, 모두를 위한 모빌리티 라이프, 그 길에 텔레칩스가 함께합니다.`
+            }
         ]
     },
     {

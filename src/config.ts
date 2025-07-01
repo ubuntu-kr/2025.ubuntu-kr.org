@@ -135,7 +135,7 @@ export const WebsiteConfig = {
     },
     timetable: {
         halls: ["jeju", "donghae", "dokdo"],
-        indicoExportUrl: "https://events.canonical.com/export/timetable/126.json?occ=yes&pretty=yes",
+        indicoExportUrl: "https://events.canonical.com/export/timetable/126.json",
         baseUrl: "https://events.canonical.com",
         showDetails: "https://events.canonical.com/event/126/timetable/?layout=room",
         difficulty: {
