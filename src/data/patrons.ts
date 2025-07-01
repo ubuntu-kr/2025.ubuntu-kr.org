@@ -26,4 +26,8 @@ export const ukc = [
         name: "방기연",
         org: "C++ Korea"
     },
+    {
+        name: "김세영",
+        org: "Canonical Ltd."
+    },
 ]
