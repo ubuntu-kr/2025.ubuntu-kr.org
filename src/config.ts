@@ -1,9 +1,10 @@
 
 
 import * as m from "./paraglide/messages.js";
-import UCKLogo from './assets/logo.svg'
-import MicrosoftKoreaVenueImage from '@assets/hall.jpg'
-import UbuConKoreaLogo from "@assets/UbuntuKorea.svg"
+import UCKLogo from './assets/logo.svg';
+import MicrosoftKoreaVenueImage from '@assets/hall.jpg';
+import UbuntuKoreaLogo from "@assets/UbuntuKorea.svg";
+import UbuntuKorea20th from "@assets/UbuntuKorea20th.svg";
 
 export interface SubMenuItem {
     link: string;
@@ -97,7 +98,8 @@ export const WebsiteConfig = {
         contactUs: "mailto:contact@ubuntu-kr.org",
         srcRepoUrl: "https://github.com/ubuntu-kr/2025.ubuntu-kr.org",
         organizers: [
-            { name: "Ubuntu Korea Community", logoImage: UbuConKoreaLogo.src, link: "https://www.ubuntu-kr.org" },
+            { name: "Ubuntu Korea Community", logoImage: UbuntuKoreaLogo.src, link: "https://www.ubuntu-kr.org" },
+            { name: "20", logoImage: UbuntuKorea20th.src, link: "", desc: "Years"}
         ]
     },
     mainBanner: {
