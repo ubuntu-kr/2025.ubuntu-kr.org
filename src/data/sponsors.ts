@@ -26,6 +26,7 @@ export const sponsors = [
             {
                 name: "Telechips",
                 logoUrl: telechipsLogo.src,
+                url: "https://telechips.com",
                 description: `**미래를 위한 기술, 모두를 위한 모빌리티로 세상을 변화시킵니다.**
 
 텔레칩스는 차량용 반도체 분야에서 미래를 위한 혁신적인 기술을 바탕으로, IVIㆍCockpit, ADASㆍAI, MCU, Network gateway 등
