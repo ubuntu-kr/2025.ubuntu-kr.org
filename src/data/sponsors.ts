@@ -8,6 +8,7 @@ import whatapLogo from "@assets/sponsors/whatap.png";
 import grometric from "@assets/sponsors/grometric.svg";
 import yozmitLogo from "@assets/sponsors/yozmit.svg";
 import telechipsLogo from "@assets/sponsors/telechips.svg";
+import openinfraLogo from "@assets/sponsors/openinfra.svg";
 
 export const sponsors = [
     {
@@ -56,16 +57,6 @@ export const sponsors = [
         ]
     },
     {
-        sponsorLevelName: "Silver",
-        sizeOnLargeScreen: 4,
-        sizeOnMediumScreen: 4,
-        sizeOnSmallScreen: 3,
-        showPopup: true,
-        list: [
-
-        ]
-    },
-    {
         sponsorLevelName: "Bronze",
         sizeOnLargeScreen: 3,
         sizeOnMediumScreen: 3,
@@ -95,16 +86,6 @@ AI 도입 과정의 장벽을 낮추는 AI 인프라 혁신 기업 래블업은 
                 url: "https://www.whatap.io/",
                 description: "WhaTap Labs 에서는 IT 모니터링 서비스인 “WhaTap”으로, 개발자와 운영자가 IT 서비스를 더 쉽고 안정적으로 운영할 수 있도록 하고 있습니다."
             }
-        ]
-    },
-    {
-        sponsorLevelName: "Supporter",
-        sizeOnLargeScreen: 3,
-        sizeOnMediumScreen: 3,
-        sizeOnSmallScreen: 2,
-        showPopup: true,
-        list: [
-
         ]
     },
     {
@@ -142,4 +123,33 @@ IT 전문가와 미래의 전문가를 꿈꾸는 이의 동반자로 30년 한 �
             }
         ]
     },
+    {
+        sponsorLevelName: "Community",
+        sizeOnLargeScreen: 3,
+        sizeOnMediumScreen: 3,
+        sizeOnSmallScreen: 2,
+        showPopup: true,
+        list: [
+            {
+                name: "오픈 인프라 한국 사용자 모임",
+                logoUrl: openinfraLogo.src,
+                url: "https://openinfra-kr.org/",
+                description: `**오픈스택을 포함, 오픈 인프라에 대한 주제를 자유롭게 논의하는 커뮤니티입니다.**
+
+2011년 2월 시작한 오픈스택 한국 커뮤니티는 2012년 9월 설립된 OpenStack Foundation으로부터 공식 커뮤니티로 인정받아 클라우드를 구축하는 오픈 소스인 OpenStack과 함께 발전하였습니다.
+
+2020년 10월 재단이 Open Infrastructure Foundation으로 명칭 변경을 하였고, 국내 커뮤니티 또한 발맞추어 현재는 "오픈 인프라 한국 사용자 모임"을 공식 명칭으로 사용하고 있습니다.
+
+온라인 커뮤니티 및 문서 서비스 제공, 각종 세미나와 컨퍼런스 개최, 오픈스택 및 관련 오픈소스 기술에 대한 그룹 스터디와 연구/개발 및 프로젝트 등 다양한 활동을 하고 있습니다.
+                
+- 국내 엔지니어 및 개발자를 대상으로 정기 세미나 개최
+- 오픈 인프라 프로젝트를 스터디하는데 돕기
+- 업스트림 트레이닝을 통한 오픈인프라 프로젝트 참여, 컨트리뷰션 및 확산
+- 관련 커뮤니티와 오픈 인프라 커뮤니티 데이 행사를 매년 개최
+
+[포럼](https://forum.openinfra-kr.org/) / [Facebook 그룹](https://fb.com/groups/openstack-kr) / [위키](https://wiki.openstack.org/wiki/Korea)
+`
+            }
+        ]
+    }
 ]
