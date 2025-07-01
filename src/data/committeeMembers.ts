@@ -2,6 +2,7 @@ import * as m from "../paraglide/messages.js";
 import uck25Logo from "@assets/logo.svg";
 import hoehyeongProfile from "@assets/committiee/hoehyeong.jpg";
 import inahProfile from "@assets/committiee/inahHwang.jpeg";
+import euiseoProfile from "@assets/committiee/euiseo.jpg";
 
 export const committeeMembers = [
     {
@@ -125,7 +126,7 @@ export const committeeMembers = [
             m.role_sponsorship_finances(),
             m.role_contents()
         ],
-        profileImageUrl: "https://discourse.ubuntu-kr.org/user_avatar/discourse.ubuntu-kr.org/zeroday0619/144/12832_2.png"
+        profileImageUrl: euiseoProfile.src
     },
     {
         name: "Inah Hwang",
