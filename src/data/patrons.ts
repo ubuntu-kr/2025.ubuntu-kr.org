@@ -10,6 +10,14 @@ export const patrons = [
     {
         name: "유현아",
         org: "한빛엔"
+    },
+    {
+        name: "김석현",
+        org: "(주)볼타코퍼레이션"
+    },
+    {
+        name: "정재훈",
+        org: "MONOLITH INC."
     }
 ]
 
