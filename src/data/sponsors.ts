@@ -27,7 +27,7 @@ export const sponsors = [
             {
                 name: "Telechips",
                 logoUrl: telechipsLogo.src,
-                url: "https://telechips.com",
+                url: "https://topst.ai/",
                 description: `텔레칩스는 차량용 반도체 기술력을 바탕으로, 이제 차량 외 분야로 확장하며 TOPST 브랜드를 통해 Single Board Computer(SBC) 시장에 진입합니다.
 TOPST는 개발자 친화적인 환경을 위해 Ubuntu를 주요 지원 OS로 채택했으며, TOPST 전용 Ubuntu를 통해 고성능 SBC를 보다 손쉽게 경험하실 수 있습니다.`
             }
