@@ -7,7 +7,7 @@ import lablupLogo from "@assets/sponsors/lablup.svg";
 import whatapLogo from "@assets/sponsors/whatap.png";
 import grometric from "@assets/sponsors/grometric.svg";
 import yozmitLogo from "@assets/sponsors/yozmit.svg";
-import telechipsLogo from "@assets/sponsors/topst.png";
+import telechipsLogo from "@assets/sponsors/TOPST.svg";
 import openinfraLogo from "@assets/sponsors/openinfra.svg";
 
 export const sponsors = [
