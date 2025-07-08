@@ -1,7 +1,7 @@
 
 import { useState, type MouseEvent } from "react";
 import * as m from "../paraglide/messages.js";
-import { Remark } from "react-remark";
+import Markdown from "marked-react";
 type SponsorLogoAndModalProps = {
     name: string,
     level: string,
@@ -41,9 +41,9 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                 <img src={props.logoImageSrc} alt={props.name} loading="lazy" decoding="async" style={{ width: "100%" }} />
                 <h1>{props.name}</h1>
                 <b>{props.level}</b>
-                <Remark>
+                <Markdown>
                     {props.description}
-                </Remark>
+                </Markdown>
                 <footer className="p-modal__footer">
                 <a href={props.url} target="_blank"><button className="p-button--positive u-no-margin--bottom">{m.visit_website()}</button></a>
                 </footer>
