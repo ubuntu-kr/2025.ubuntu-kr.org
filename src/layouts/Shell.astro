@@ -34,8 +34,11 @@ const { title } = Astro.props;
                                             {maxHeight: "60px", paddingTop: "10px", filter: "contrast(50%)"} :
                                             {maxHeight: "60px", paddingTop: "10px"}
                                         }
+                                        height="60px"
                                         class="p-logo-section__logo"
                                         src={item.logoImage}
+                                        loading="lazy"
+                                        decoding="async"
                                         alt={item.name}
                                     />
                                     {item.desc ? (
@@ -60,6 +63,8 @@ const { title } = Astro.props;
                                         }
                                         class="p-logo-section__logo"
                                         src={item.logoImage}
+                                        loading="lazy"
+                                        decoding="async"
                                         alt={item.name}
                                     />
                                     {item.desc ? (

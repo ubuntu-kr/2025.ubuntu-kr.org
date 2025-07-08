@@ -6,6 +6,7 @@ description: Detailed Venue, Health & Safety information
 import OpenStreetMap from "@components/OpenStreetMap.astro";
 import hall from "@assets/hall.jpg";
 import insideVenue from "@assets/inside_venue.png";
+import { Image } from "astro:assets";
 
 ## Microsoft Korea
 
@@ -40,7 +41,7 @@ import insideVenue from "@assets/inside_venue.png";
 
 <div className="grid-row">
     <div className="grid-col-4">
-        <img src={insideVenue.src} alt="Map of the 13th floor of Microsoft Korea. Starting from Elevator hall, the left side is a main entrance, and the right side is restroom. By entering the main entrance, the reception desk and rest area is on your right side and halls are located in the left side, Dockdo, Donghae, and Jeju. The emergency exit is on the other side of the Jeju Hall."/>
+        <Image src={insideVenue} alt="Map of the 13th floor of Microsoft Korea. Starting from Elevator hall, the left side is a main entrance, and the right side is restroom. By entering the main entrance, the reception desk and rest area is on your right side and halls are located in the left side, Dockdo, Donghae, and Jeju. The emergency exit is on the other side of the Jeju Hall." loading="lazy" decoding="async"/>
     </div>
     <div className="grid-col-4">
         - Reception: Registration and Information
@@ -53,7 +54,7 @@ import insideVenue from "@assets/inside_venue.png";
 
 <div className="grid-row">
     <div className="grid-col-4">
-        <img src={hall.src} alt="Hall with a pane of glass. The long desk with four chairs are provided." />
+        <Image src={hall} alt="Hall with a pane of glass. The long desk with four chairs are provided." loading="lazy" decoding="async" />
     </div>
     <div className="grid-col-4">
         > Some events, such as opening, closing, key signing party, lightning talks, will be held in all halls by removing the partitions.

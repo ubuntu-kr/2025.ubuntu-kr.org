@@ -19,7 +19,10 @@ export default defineConfig({
     locales: ["en", "ko"],
     routing: {
       prefixDefaultLocale: true
-  }
+    }
   },
-
+  image: {
+    domains: ["events.canonical.com"],
+    remotePatterns: [{ protocol: "https" }]
+  },
 });

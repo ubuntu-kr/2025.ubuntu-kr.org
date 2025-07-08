@@ -29,7 +29,7 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                     document.addEventListener("keydown", closeKeyListener);
                 }
             }} aria-controls={`modal-${props.index}`} style={{ width: "100%" }}>
-                <img src={props.logoImageSrc} alt={props.name} loading="lazy" style={{ minWidth: "80%" }}/>
+                <img src={props.logoImageSrc} alt={props.name} loading="lazy" decoding="async" style={{ minWidth: "80%" }}/>
             </button>
            
             <div className="p-modal" id={`modal-${props.index}`} style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
@@ -38,7 +38,7 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                     <h2 className="p-modal__title" id="modal-title">{m.sponsor_about()}</h2>
                     <button className="p-modal__close" aria-label="Close active modal" aria-controls="modal" onClick={closeHandler}>Close</button>
                 </header>
-                <img src={props.logoImageSrc} alt={props.name} style={{ width: "100%" }} />
+                <img src={props.logoImageSrc} alt={props.name} loading="lazy" decoding="async" style={{ width: "100%" }} />
                 <h1>{props.name}</h1>
                 <b>{props.level}</b>
                 <Remark>
