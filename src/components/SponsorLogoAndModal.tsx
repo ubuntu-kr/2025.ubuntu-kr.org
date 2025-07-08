@@ -28,11 +28,11 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                     setModalOpen(true); 
                     document.addEventListener("keydown", closeKeyListener);
                 }
-            }} aria-controls={`modal-${props.index}`} style={{ width: "100%" }}>
+            }} aria-controls={`modal-${props.level}-${props.index}`} style={{ width: "100%" }}>
                 <img src={props.logoImageSrc} alt={props.name} loading="lazy" decoding="async" style={{ minWidth: "80%" }}/>
             </button>
            
-            <div className="p-modal" id={`modal-${props.index}`} style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
+            <div className="p-modal" id={`modal-${props.level}-${props.index}`} style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
             <section className="p-modal__dialog" role="dialog" aria-modal={modalOpen && props.showPopup ? "true":"false"} aria-labelledby="modal-title" aria-describedby="modal-description">
                 <header className="p-modal__header">
                     <h2 className="p-modal__title" id="modal-title">{m.sponsor_about()}</h2>
