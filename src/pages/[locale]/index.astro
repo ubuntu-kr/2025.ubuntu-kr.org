@@ -7,6 +7,7 @@ import BlogFeed from '@components/BlogFeed.astro';
 import { WebsiteConfig } from '../../config';
 import { getRelativeLocaleUrlList } from 'astro:i18n';
 import * as m from "../../paraglide/messages.js";
+import { Image } from 'astro:assets';
 
 export function getStaticPaths() {
 	return getRelativeLocaleUrlList().map((locale) => {
@@ -46,7 +47,14 @@ export function getStaticPaths() {
 		<div class="col">
 			<div class="p-section--shallow">
 				<div class="p-image-container--16-9 is-cover p-image-container--3-2-on-medium p-image-container--16-9-on-small">
-					<img class="p-image-container__image" src={WebsiteConfig.cityBanner.cityImage} alt="Microsoft Korea Hall">
+					<Image
+						class="p-image-container__image"
+						src={WebsiteConfig.cityBanner.cityImage}
+						alt="Microsoft Korea Hall"
+						loading="lazy"
+						width={800}
+						height={450}
+					/>
 				</div>
 			</div>
 		</div>

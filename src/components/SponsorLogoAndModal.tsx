@@ -1,7 +1,7 @@
 
 import { useState, type MouseEvent } from "react";
 import * as m from "../paraglide/messages.js";
-import { Remark } from "react-remark";
+import Markdown from "marked-react";
 type SponsorLogoAndModalProps = {
     name: string,
     level: string,
@@ -28,22 +28,22 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                     setModalOpen(true); 
                     document.addEventListener("keydown", closeKeyListener);
                 }
-            }} aria-controls={`modal-${props.index}`} style={{ width: "100%" }}>
-                <img src={props.logoImageSrc} alt={props.name} loading="lazy" style={{ minWidth: "80%" }}/>
+            }} aria-controls={`modal-${props.level}-${props.index}`} style={{ width: "100%" }}>
+                <img src={props.logoImageSrc} alt={props.name} loading="lazy" decoding="async" style={{ minWidth: "80%" }}/>
             </button>
            
-            <div className="p-modal" id={`modal-${props.index}`} style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
+            <div className="p-modal" id={`modal-${props.level}-${props.index}`} style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
             <section className="p-modal__dialog" role="dialog" aria-modal={modalOpen && props.showPopup ? "true":"false"} aria-labelledby="modal-title" aria-describedby="modal-description">
                 <header className="p-modal__header">
                     <h2 className="p-modal__title" id="modal-title">{m.sponsor_about()}</h2>
                     <button className="p-modal__close" aria-label="Close active modal" aria-controls="modal" onClick={closeHandler}>Close</button>
                 </header>
-                <img src={props.logoImageSrc} alt={props.name} style={{ width: "100%" }} />
+                <img src={props.logoImageSrc} alt={props.name} loading="lazy" decoding="async" style={{ width: "100%" }} />
                 <h1>{props.name}</h1>
                 <b>{props.level}</b>
-                <Remark>
+                <Markdown>
                     {props.description}
-                </Remark>
+                </Markdown>
                 <footer className="p-modal__footer">
                 <a href={props.url} target="_blank"><button className="p-button--positive u-no-margin--bottom">{m.visit_website()}</button></a>
                 </footer>

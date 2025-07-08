@@ -34,9 +34,9 @@ import UbuntuKrCircleWhite from "@assets/UbuntuKrCircleWhite.svg"
                         <a class="p-navigation__link" href={navItem.link}>{navItem.label}</a>
                     </li>
                 ) : (
-                    <li class="p-navigation__item--dropdown-toggle" id={`link-${index}`} aria-haspopup="menu">
+                    <li class="p-navigation__item--dropdown-toggle" id={`link-${index}`}>
                         <a href={`#link-${index}-menu`}
-                            aria-controls={`link-${index}-menu`}
+                            aria-controls={`link-${index}-menu`} aria-haspopup="menu"
                             class="p-navigation__link">{navItem.label}</a>
                         <ul class="p-navigation__dropdown"
                             id={`link-${index}-menu`}
