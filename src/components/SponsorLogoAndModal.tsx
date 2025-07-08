@@ -35,7 +35,7 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
             <div className="p-modal" id={`modal-${props.level}-${props.index}`} style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
             <section className="p-modal__dialog" role="dialog" aria-modal={modalOpen && props.showPopup ? "true":"false"} aria-labelledby="modal-title" aria-describedby="modal-description">
                 <header className="p-modal__header">
-                    <h2 className="p-modal__title" id="modal-title">{m.sponsor_about()}</h2>
+                    <h2 className="p-modal__title" id={`modal-${props.level}-${props.level}-title`}>{m.sponsor_about()}</h2>
                     <button className="p-modal__close" aria-label="Close active modal" aria-controls="modal" onClick={closeHandler}>Close</button>
                 </header>
                 <img src={props.logoImageSrc} alt={props.name} loading="lazy" decoding="async" style={{ width: "100%" }} />
