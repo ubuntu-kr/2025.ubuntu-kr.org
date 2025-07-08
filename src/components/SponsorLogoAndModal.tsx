@@ -28,7 +28,7 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                     setModalOpen(true); 
                     document.addEventListener("keydown", closeKeyListener);
                 }
-            }} aria-controls="modal" style={{ width: "100%" }}>
+            }} aria-controls={`modal-${props.index}`} style={{ width: "100%" }}>
                 <img src={props.logoImageSrc} alt={props.name} loading="lazy" style={{ minWidth: "80%" }}/>
             </button>
            
