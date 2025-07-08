@@ -27,7 +27,7 @@ import UbuntuKrCircleWhite from "@assets/UbuntuKrCircleWhite.svg"
                 title="close menu"><i class="p-icon--chevron-up"></i></a>
         </div>
         <nav class="p-navigation__nav" aria-label="Navigation">
-            <ul class="p-navigation__items">
+            <ul class="p-navigation__items" role="menu">
             {WebsiteConfig.navigation(Astro.currentLocale ?? "en").map((navItem, index) => (
                 navItem.childs.length <= 0 ? (
                     <li class="p-navigation__item">
@@ -52,7 +52,7 @@ import UbuntuKrCircleWhite from "@assets/UbuntuKrCircleWhite.svg"
             ))}
                 
             </ul>
-            <ul class="p-navigation__items">
+            <ul class="p-navigation__items" role="menu">
                 {WebsiteConfig.subNavigation.map((navItem, index) => (
                     navItem.childs.length <= 0 ? (
                         <li class="p-navigation__item is-right-shifted" role="menuitem">

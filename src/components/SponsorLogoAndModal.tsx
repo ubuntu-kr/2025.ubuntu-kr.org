@@ -8,7 +8,8 @@ type SponsorLogoAndModalProps = {
     logoImageSrc: string,
     description: string,
     url: string,
-    showPopup: Boolean
+    showPopup: Boolean,
+    index: number
 }
 export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
     const [modalOpen, setModalOpen] = useState(false);
@@ -31,7 +32,7 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                 <img src={props.logoImageSrc} alt={props.name} loading="lazy" style={{ minWidth: "80%" }}/>
             </button>
            
-            <div className="p-modal" id="modal" style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
+            <div className="p-modal" id={`modal-${props.index}`} style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
             <section className="p-modal__dialog" role="dialog" aria-modal={modalOpen && props.showPopup ? "true":"false"} aria-labelledby="modal-title" aria-describedby="modal-description">
                 <header className="p-modal__header">
                     <h2 className="p-modal__title" id="modal-title">{m.sponsor_about()}</h2>
