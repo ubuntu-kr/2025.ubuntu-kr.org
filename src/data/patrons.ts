@@ -18,6 +18,10 @@ export const patrons = [
     {
         name: "정재훈",
         org: "MONOLITH INC."
+    },
+    {
+        name: "강성진",
+        org: ""
     }
 ]
 
