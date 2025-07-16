@@ -9,6 +9,7 @@ import grometric from "@assets/sponsors/grometric.svg";
 import yozmitLogo from "@assets/sponsors/yozmit.svg";
 import telechipsLogo from "@assets/sponsors/TOPST.svg";
 import openinfraLogo from "@assets/sponsors/openinfra.svg";
+import cppKoreaLogo from "@assets/sponsors/cppkorea.svg";
 
 export const sponsors = [
     {
@@ -142,6 +143,12 @@ IT 전문가와 미래의 전문가를 꿈꾸는 이의 동반자로 30년 한 �
 
 [포럼](https://forum.openinfra-kr.org/) / [Facebook 그룹](https://fb.com/groups/openstack-kr) / [위키](https://wiki.openstack.org/wiki/Korea)
 `
+            },
+            {
+                name: "C++ Korea",
+                logoUrl: cppKoreaLogo.src,
+                url: "https://github.com/cppkorea",
+                description: "한국에서 C++을 사용하는 사람들에게 도움이 되는 정보를 공유하고 서로 발전하기 위한 취지로 2013년 10월 8일에 개설한 커뮤니티입니다."
             }
         ]
     }
