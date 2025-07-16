@@ -110,18 +110,7 @@ export const WebsiteConfig = {
                 link: `/tickets`,
                 class: "p-button--positive",
                 target: "_blank"
-            },
-            {
-                label: m.nav_sponsors_become(),
-                link: `/${locale}/sponsors/become-a-sponsor`,
-                class: "p-button"
-            },
-            {
-                label: m.mainBanner_earlybird,
-                link: `https://discourse.ubuntu-kr.org/t/ubucon-korea-2025/49982`,
-                class: "p-button",
-                target: "_blank"
-            },
+            }
         ],
         logo: UCKLogo
     },
