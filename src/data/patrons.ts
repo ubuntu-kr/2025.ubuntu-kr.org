@@ -9,7 +9,7 @@ export const patrons = [
     },
     {
         name: "유현아",
-        org: "한빛엔"
+        org: "Foss for All"
     },
     {
         name: "김석현",
