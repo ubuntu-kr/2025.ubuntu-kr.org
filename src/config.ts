@@ -48,6 +48,10 @@ export const WebsiteConfig = {
                 {
                     label: m.nav_programs_social(),
                     link: "https://github.com/ubuntu-kr/ksp-toolkits/blob/master/ksp/ksp-20250809/readme.md"
+                },
+                {
+                    label: m.nav_programs_lunch(),
+                    link: `/${locale}/programs/lunch`
                 }
             ]
         },
@@ -130,7 +134,7 @@ export const WebsiteConfig = {
         baseUrl: "https://events.canonical.com",
         showDetails: "https://events.canonical.com/event/126/timetable/?layout=room",
         difficulty: {
-            beginner: [11, 4, 5, 19, 13, 6, 8],
+            beginner: [4, 5, 6, 8, 10, 11, 13, 18, 19, 25, 30],
             intermediate: [9, 3, 12, 2, 1],
             advanced: [20, 16]
         }
