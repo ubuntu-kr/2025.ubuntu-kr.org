@@ -10,6 +10,7 @@ import yozmitLogo from "@assets/sponsors/yozmit.svg";
 import telechipsLogo from "@assets/sponsors/TOPST.svg";
 import openinfraLogo from "@assets/sponsors/openinfra.svg";
 import cppKoreaLogo from "@assets/sponsors/cppkorea.svg";
+import golangKoreaLogo from "@assets/sponsors/golang_korea.svg";
 
 export const sponsors = [
     {
@@ -149,6 +150,12 @@ IT 전문가와 미래의 전문가를 꿈꾸는 이의 동반자로 30년 한 �
                 logoUrl: cppKoreaLogo.src,
                 url: "https://github.com/cppkorea",
                 description: "한국에서 C++을 사용하는 사람들에게 도움이 되는 정보를 공유하고 서로 발전하기 위한 취지로 2013년 10월 8일에 개설한 커뮤니티입니다."
+            },
+            {
+                name: "Golang Korea",
+                logoUrl: golangKoreaLogo.src,
+                url: "https://www.facebook.com/groups/golangko",
+                description: `Golang Korea는 국내 Go 언어 생태계의 다양성과 볼륨을 키우기 위해 소통 채널을 만들고, 다양한 프로그램을 통해 Go 언어를 알릴 수 있도록 최선을 다하고 있습니다. 국내에서는 테크톡, 네트워킹 행사, 핸즈온, 퀵랩 행사를 진행하고 있으며, 여성 Go 개발자를 위한 Woman Who Go, 교육 사각지대에 놓인 아동을 위해 준비한 Go 교육 프로그램 Go Bridge 프로그램을 준비하고 진행하고 있습니다. 또한, Go 언어 커뮤니티를 다루는 해외 커뮤니티와 협력하여 Go 언어 한국 생태계를 그들에게 공유하고, 그들의 소식을 한국에 공유하는 등으로 Go 언어에 소식의 가교 역할을 수행하고 국내 Go 지식 기반의 볼륨을 만들어나가고 있습니다.`
             }
         ]
     }
