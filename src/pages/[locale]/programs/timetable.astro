@@ -81,8 +81,8 @@ sessions.sort(function(a:any, b: any) {
                 </div>
               );
             })}
-            <div class="p-tabs__item">
-              <a class="p-tabs__link" id="full" href={WebsiteConfig.timetable.showDetails} target="_blank" tabindex="0">
+            <div class="p-tabs__item" tabindex="-1">
+              <a class="p-tabs__link" id="full" href={WebsiteConfig.timetable.showDetails} target="_blank">
                 <span>{m.timetable_full()}(Indico)</span>
                 <i class="p-icon--external-link" />
               </a>

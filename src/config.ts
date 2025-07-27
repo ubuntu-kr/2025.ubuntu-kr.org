@@ -114,6 +114,11 @@ export const WebsiteConfig = {
                 link: `/tickets`,
                 class: "p-button--positive",
                 target: "_blank"
+            },
+            {
+                label: m.nav_programs_timetable(),
+                link: `/${locale}/programs/timetable`,
+                class: "p-button"
             }
         ],
         logo: UCKLogo
