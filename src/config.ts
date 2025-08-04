@@ -116,6 +116,12 @@ export const WebsiteConfig = {
                 target: "_blank"
             },
             {
+                label: m.nav_check_ticket(),
+                link: "https://event-us.kr/mypage/allevent",
+                class: "p-button",
+                target: "_blank"
+            },
+            {
                 label: m.nav_programs_timetable(),
                 link: `/${locale}/programs/timetable`,
                 class: "p-button"
