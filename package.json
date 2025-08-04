@@ -12,19 +12,19 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/mdx": "^4.3.3",
     "@astrojs/react": "^4.3.0",
     "@inlang/paraglide-astro": "^0.4.1",
     "@types/jsdom": "^21.1.7",
     "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "astro": "^5.11.0",
+    "@types/react-dom": "^19.1.7",
+    "astro": "^5.12.8",
     "jsdom": "^26.1.0",
     "marked-react": "^3.0.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "typescript": "^5.8.3",
-    "vanilla-framework": "^4.25.0"
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2",
+    "vanilla-framework": "^4.27.0"
   },
   "devDependencies": {
     "@inlang/paraglide-js": "1.11.8"
