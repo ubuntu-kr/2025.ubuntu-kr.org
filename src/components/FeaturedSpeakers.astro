@@ -2,7 +2,8 @@
 import { WebsiteConfig } from "../config";
 import eventLogo from "@assets/logo.svg";
 import * as m from "../paraglide/messages.js";
-import { languageTag } from "../paraglide/runtime";
+import speakerImageMap from "../data/speaker-image-map.json";
+const cachedSpeakerImages = speakerImageMap as Record<string, string>;
 
 const indicoResponse = await fetch(WebsiteConfig.featuredSpeakers.indicoExportUrl);
 const indicoResJson = await indicoResponse.json();
@@ -12,7 +13,6 @@ const sessions = indicoResJson.results
 const featuredSessions = sessions.filter((session: any) =>
     WebsiteConfig.featuredSpeakers.contributionIds.includes(session.friendly_id)
 );
-
 const featuredSpeakers = [];
 for (const session of featuredSessions) {
     if (session.speakers.length === 0) {
@@ -30,7 +30,7 @@ for (const session of featuredSessions) {
         );
         featuredSpeakers.push({
             name: `${speaker.first_name} ${speaker.last_name}`,
-            profileImg: imgId?.user,
+            profileImg: imgId?.user ? cachedSpeakerImages[String(imgId.user)] : null,
             title: session.title,
             url: session.url
         })
@@ -51,10 +51,7 @@ for (const session of featuredSessions) {
             {featuredSpeakers.map((speaker) => (
                 <div class="col-4 col-medium-3">
                     <a class="p-media-object--large p-button--base" href={speaker.url} target="_blank">
-                        <img src={speaker.profileImg ? 
-                                `https://events.canonical.com/user/${speaker.profileImg}/picture-default`
-                                : eventLogo.src
-                            }
+                        <img src={speaker.profileImg ?? eventLogo.src}
                             onerror={`this.onerror=null;this.src=${eventLogo.src}`}
                             class="p-media-object__image is-round"
                             alt=""

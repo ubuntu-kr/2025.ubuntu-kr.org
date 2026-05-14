@@ -1,31 +1,71 @@
-name: Deploy to GitHub Pages
+name: Deploy image cache test to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
-  
-# Allow this job to clone the repo and create a page deployment
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium runtime
+        run: npx playwright install --with-deps chromium
+
+      - name: Restore Indico speaker image cache
+        id: indico-speaker-cache
+        uses: actions/cache/restore@v5
+        with:
+          path: |
+            public/speakers
+            src/data/speaker-image-map.json
+          key: ${{ runner.os }}-indico-speakers-${{ hashFiles('src/config.ts') }}
+          restore-keys: |
+            ${{ runner.os }}-indico-speakers-
+
+      - name: Fetch Indico speaker images
+        run: npm run image-fetch
+
       - name: Build website
-        uses: withastro/action@v2
-        # with:
-            # path: . # The root location of your Astro project inside the repository. (optional)
-            # node-version: 16 # The specific version of Node that should be used to build your site. Defaults to 16. (optional)
-            # package-manager: yarn # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+        run: npm run build
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+      - name: Save Indico speaker image cache
+        if: always() && steps.indico-speaker-cache.outputs.cache-hit != 'true' && hashFiles('public/speakers/*') != ''
+        uses: actions/cache/save@v5
+        with:
+          path: |
+            public/speakers
+            src/data/speaker-image-map.json
+          key: ${{ steps.indico-speaker-cache.outputs.cache-primary-key }}
 
   deploy:
     needs: build
@@ -36,4 +76,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
