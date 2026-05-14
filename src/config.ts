@@ -110,14 +110,14 @@ export const WebsiteConfig = {
         showFootnote: true,
         buttons: (locale: string) => [
             {
-                label: m.nav_register(),
-                link: `/tickets`,
+                label: m.mainBanner_end(),
+                link: `https://2026.ubuntu-kr.org/${locale}`,
                 class: "p-button--positive",
                 target: "_blank"
             },
             {
-                label: m.nav_check_ticket(),
-                link: "https://event-us.kr/mypage/allevent",
+                label: m.mainBanner_watch_video(),
+                link: "https://www.youtube.com/watch?v=Kd43K8vKK-U&list=PLumkkj1MBmYuX9KKrO_T5pnByF23keWCv",
                 class: "p-button",
                 target: "_blank"
             },
