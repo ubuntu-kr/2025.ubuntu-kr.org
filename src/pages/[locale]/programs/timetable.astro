@@ -94,7 +94,7 @@ sessions.sort(function(a:any, b: any) {
             const key = `timetable_${hall}` as keyof typeof m;
             const label = typeof m[key] === "function" ? (m[key] as () => string)() : "";
             return (
-              <table tabindex="0" role="tabpanel" id={`${hall}-tab`} aria-labelledby={hall} hidden={idx !== 0 ? "hidden" : ""} class="u-table-layout--auto">
+              <table tabindex="0" role="tabpanel" id={`${hall}-tab`} aria-labelledby={hall} hidden={idx !== 0 ? true : false} class="u-table-layout--auto">
                 <thead>
                   <th>{m.timetable_time()}</th>
                   <th>{label}</th>
